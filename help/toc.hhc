@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Contents">
+		<param name="Local" value="html/hid_contents.htm">
+		</OBJECT></LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Getting Started">
+		<param name="Local" value="html\hid_flist_getting_started.htm">
+		</OBJECT></LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Creating a new CIX Forum">
+		<param name="Local" value="html\hid_creating_a_conference.htm">
+		</OBJECT></LI>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Before You Start">
+				<param name="Local" value="html/hid_before_you_start.htm">
+				</OBJECT></LI>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Choosing Your Initial Topics">
+				<param name="Local" value="html/hid_choosing_topics.htm">
+				</OBJECT></LI>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Creating Your Forum">
+				<param name="Local" value="html/hid_create_conf.htm">
+				</OBJECT></LI>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Adding Initial Participants">
+				<param name="Local" value="html/hid_initial_participants.htm">
+				</OBJECT></LI>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Announcing Your New Forum">
+				<param name="Local" value="html/hid_announcing_your_conf.htm">
+				</OBJECT></LI>
+		</UL>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Moderating a Forum">
+		<param name="Local" value="html\hid_moderating_a_conference.htm">
+		</OBJECT></LI>
+		<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="What does moderating a forum involve?">
+			<param name="Local" value="html\hid_mod_general.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="The Forum Note">
+			<param name="Local" value="html\hid_conference_note.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Looking after topics in your forum">
+			<param name="Local" value="html\hid_mod_topics.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Maintaining file lists">
+			<param name="Local" value="html\hid_mod_file_lists.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Adding and removing participants">
+			<param name="Local" value="html\hid_mod_participants.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Withdrawing messages">
+			<param name="Local" value="html/hid_mod_messages.htm">
+			</OBJECT></LI>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Coordinating moderating duties between co-moderators">
+			<param name="Local" value="html/hid_mod_comods.htm">
+			</OBJECT></LI>
+		</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Reference">
+		<param name="Local" value="html\hid_reference.htm">
+		</OBJECT></LI>
+</UL>
+</BODY></HTML>

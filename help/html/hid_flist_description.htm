@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>File Lists on CIX</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P><A NAME="hid_flist_description"></A><B>File Lists on CIX</B></P>
+
+<P>The four file lists on CIX relevant to file list maintenance are:</P>
+
+<P><B>The File Directory</B></P>
+
+<P>Commonly known as the <I>fdir</I>. This is the actual directory on CIX where files uploaded to a topic are stored; CIX creates the list dynamically every time Moderate requests it to be downloaded. When you are editing the file list in Moderate, you can choose files from here to add to the file list visible to users.</P>
+
+<P>The <I>fdir</I> is stored on your computer as <A HREF="hid_topic_root.htm">&lt;topic root&gt;</A>.fld in the <I>flist</I> subdirectory of you Ameol data directory.</P>
+
+<P><B>The Filepool</B></P>
+
+<P>This is a pool of files held on CIX that is accessible from any topic file list. Files of general interest can be <I>exported</I> here from a topic file list whereupon they can be included in the file list of any other topic.</P>
+
+<P>The CIX forum <I>filepool</I> maps directly onto the filepool; if a user uploads a file to the <I>2newfiles</I> topic of this forum, it can be accessed by moderators of any forum on CIX.</P>
+
+<P>Moderate doesn't keep a copy of the filepool fdir on your computer; if you want to add filepool files to your topic file list, you have to type the file's name in yourself.</P>
+
+<P><B>The Moderator's File List</B></P>
+
+<P>This is the file list you actually edit in Moderate. CIX uses it to create the users' file list whenever a copy is requested; the file references in the moderator's file list are matched against the files in the fdir or filepool and the list as displayed by <I>Topic File List</I> in Ameol is created.</P>
+
+<P>The moderator's file list is stored on your computer as <A HREF="hid_topic_root.htm">&lt;topic root&gt;</A>.flm in the <I>flist</I> subdirectory of you Ameol data directory; a single backup copy is also kept by Moderate as <A HREF="hid_topic_root.htm">&lt;topic root&gt;</A>.flb.</P>
+
+<P><B>The Users' File List</B></P>
+
+<P>This is the file list that is displayed by Ameol's <I>Topic File List</I> command, and the only list from which your forum participants can download files. CIX generates it dynamically from the moderator's file list, the fdir and the filepool whenever Ameol requests a copy.</P>
+
+<P>The users' file list is stored on your computer as <A HREF="hid_topic_root.htm">&lt;topic root&gt;</A>.fls in the <I>flist</I> subdirectory of your Ameol data directory.</P>
+
+</BODY>
+</HTML>

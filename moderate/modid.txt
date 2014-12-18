@@ -1,0 +1,392 @@
+Moderating In Depth
+
+Introduction
+
+Conferences are one of the main functions of CIX and each conference must
+have at least one Moderator. The Moderator's role is very important and,
+when carried out correctly, will make the conference work very well.
+
+This part of the CIX manual serves as a guide to Moderators - tips on how
+to run an efficient and successful conference, as well as how to perform
+the various Moderator functions.
+
+Before You Begin
+
+Types Of Conferences
+
+There are three types of conference available on CIX. Open conferences can
+be joined by any one, purely by entering the JOIN command. There is no
+restriction on membership. When a user does SHOW ALL, the conference name
+is displayed with an o (for Open) in front of it.
+
+Closed conferences require that the Moderator adds participants with the
+ADD PARTICIPANT command. This allows the Moderator control over membership.
+The Moderator should be prepared to accept requests for membership via the
+CIX mail system. Closed conferences are ideal for committees and working
+groups to discuss matters which are best not discussed in the public
+arena. The conference name is displayed, when the user does SHOW ALL, with
+a c (for Closed) in front of it.
+
+Confidential conferences are like closed conferences except that the name
+is not displayed when a user does SHOW ALL. This is for confidential
+discussions which are of no general interest.
+
+Choose your conference type carefully. For example a conference on 'pets'
+should be open, whereas a discussion between CIX users on beta-testing a
+new product should be closed or confidential.
+
+Some Words Of Advice
+
+The most important thing to do before starting a new conference is to 'Look
+before you leap'! You should firstly be sure that there is sufficient
+interest in the subject to be covered in the conference, and that the
+subject is not already covered well enough elsewhere. Many of the inert
+conferences on CIX would probably have been better served by a single
+topic within a larger conference of greater scope. For example there is no
+point in creating a new conference to discuss an obscure language compiler
+when you are the only person you know who uses it! Far better to have
+asked for a new topic in the language conference covering all versions of
+your favourite language. Join a conference on CIX called conference, there
+is a topic here called suggestions in which you can ask other users if
+there is any call to set up a particular conference. There is also a topic
+in conference called announcements, this is where you tell all CIX users
+about any new conference you have set up.
+
+A final thing you should realise is that moderating a conference is
+something that takes a great deal of time and effort to do well. If you are
+not a regular CIX caller then there is simply no point in attempting it, as
+users will very soon become irritated at the delays before uploaded files
+are made available, and messages to you are answered. You will very soon
+find yourself the only 'active' conference member. If you cannot be sure
+that you will be around for maintenance regularly, then you should perhaps
+give consideration to co-moderating instead.
+
+Keeping The Pot Boiling
+
+It is quite likely that a new conference will need to be stirred up quite
+regularly in its early days if it is to germinate properly. To do this you
+should reply to as many messages as possible, and also start up as many
+conversations as you can manage yourself.
+
+One lesson you quickly learn is that 'beginners' are worth their weight in
+gold. Quite often they are nervous about speaking up for fear of sounding
+stupid before such 'learned' company. Far from it! It is often these basic
+questions that gets a discussion going, and can often end up in greater
+enlightenment for those who thought their understanding was enough
+already.
+
+It helps to be quite opinionated, as this encourages participants with
+opposing views to join in a discussion against you, however you should at
+all times try to be constructive in your comments. Attacking the favourite
+pastime or product of another participant does not always encourage
+discussion. It may only encourage that person to go elsewhere.
+
+In the same vein, you should watch out for offensive or abusive message
+left by other participants. Remove these messages immediately, and without
+comment. Making a comment (except perhaps, privately, by mail) simply
+draws attention to the offensive nature of the message. Abusive messages
+can often result from raging discussion, in which case the participant
+responsible is not particularly useful. On occasion however a forum such
+as CIX attracts what can only be described as a 'nut', who will leave
+offensive messages at random in whatever conference comes to view.
+
+Creating A Conference
+
+The Conference Topics
+
+Having decided to start a new conference, you need to decide what the
+topics will be. Most conferences will benefit by starting off with these
+four, but of course its up to you:-
+
+digest         A read only topic updated regularly, which contains a
+               summary of the activity in other topics. This allows late
+               comers to your conference to find messages of particular
+               importance to them, and also to bring themselves quickly up
+               to date with the kind of subjects covered so far.
+general        This topic will be used for general discussion related to
+               the subject matter of the conference.
+long.messages  You should not encourage users to leave very long messages
+               in the general area. This tends to irritate readers who are
+               not interested in the particular subject under discussion.
+               Long messages are best uploaded as files into the file area
+               and referenced in the general topic.
+files          Where files related to the conference are kept, both in the
+               flist and in the message area.
+
+Creating Your Conference
+
+The general Moderator command is MODERATE or MOD which you type at the
+Main: prompt. To create a new conference called Building the command is:-
+
+Main: mod new building
+
+CIX will firstly ask if you want the conference to be Closed and, if you
+do, asks if you wish it to be Confidential as well.
+
+CIX will prompt you for names and descriptions of the initial topics in
+your conference. Use the topic names outlined above as a guide. You will be
+asked for each topic whether you wish to keep files there. The only initial
+topic where this will be the case is with the 'files' topic.
+
+Finally, you will want to make the 'digest' topic read only, because you
+are the only person who will be leaving messages there. To do this you
+type:
+
+Mod: rdonly digest
+
+Having created all of the initial topics you should then leave an
+introductory message in each. These basically just say 'hello and this is
+what this topic is all about'.
+
+Here is an example of someone setting up a conference called Building using
+the conference name and topics mentioned above.
+
+Main: mod new building
+Closed (y/n)? n
+Enter one line conference description.
+Description: For builders to exchange info and tips.
+Topicname: digest
+Do you want to keep files here (y/n)? n
+Description of digest: Find the info you want quickly
+Quit or another topicname: general
+Do you want to keep files here (y/n)? n
+Description of general: General stuff about building
+Quit or another topicname: files
+Do you want to keep files here (y/n)? y
+Description of files: Upload files for Builders here.
+Quit or another topicname: quit
+Use 'Add Participants' to add initial members.
+Mod: rdonly digest
+
+Moderating Conferences
+
+Ok, now you have set the conference up, you may want to add an initial
+'float' of conference participants, in order to get the discussions going.
+Do this using the ADD PARTICIPANT <username> command, i.e.
+
+Mod: add participant mat fthorn sthorn
+
+as you see it is possible to add several participants with a single ADD
+PART command. Be very careful who you add to a conference, some people
+don't like to be added by the Moderator, they prefer to JOIN themselves or
+(in the case of a Closed conference) to ask before being added.
+
+Later on in the conference's life, you may be asked to add further topics.
+This is very easy, just use the command ADD TOPIC and CIX will ask you for
+a topic to add.
+
+To leave the Moderator sub-system simply type Q at the Mod: prompt, you
+will find yourself back to wherever you called the Moderator sub-system
+from. To get back into the moderating sub-system, you just type MOD when
+you are in the conference / topic you want to moderate. You may also type
+MOD <confname> from the Main: prompt if you wish.
+
+Withdrawing Messages
+
+As Moderator of the conference, you are free to withdraw messages which you
+feel are not relevant to the topic, and allow you to maintain a level of
+control over the conference proceedings. You can do this while you are
+reading the conference normally, with the WITHDRAW command (e.g. WITHDRAW
+123 marks message 123 as 'deleted by Moderator')
+
+Conference Note
+
+When you SHOW a conference, you sometimes get extra text, telling you about
+the conference in more detail than just a list of topics. This is called
+the Conference note. As Moderator you can create and edit this text by
+typing NOTE at the Mod: prompt. You will then be placed in the standard
+editor and can enter the text.
+
+Voting System
+
+Many people asked for a way of taking a 'straw poll' of opinions on CIX. To
+this end, we have added the Voting messages. These are denoted by the words
+'Voting Message' in the header. They are not meant for life and death
+decisions, but purely as an opinion tester.
+
+ONLY the Moderator may create a voting message. This is done with the VOTE
+command at the Mod: prompt. Enter VOTE and CIX will prompt for a topic.
+Enter a topic and then CIX will prompt for a message number. Enter a
+message number. (This cannot be a deleted message). CIX will redisplay the
+message. You can then enter 9 lines of up to 40 characters of options, and
+to finish the list, enter the word QUIT. You then have a chance to modify
+any of the lines (But at present, you cannot add or delete options). Once
+you are happy, answer 'yes' to the 'Do you want to change..' question and
+CIX will prompt you again to make sure you are happy with what you have
+set up. (Answer 'no' and you are returned to the Mod: prompt).
+
+Note 1: this is a one time only routine. You cannot overwrite existing
+voting options or edit them.
+
+Note 2: if you are keeping Files in that topic, you will notice with the
+FDIR command files by the names like 10.opts, 10.vots. These are the
+voting administration files. DON'T delete them or add them to the Flist.
+
+Adding And Removing Moderators
+
+You may need help moderating your conference. You do this by adding a Co-
+moderator, or Co-moderators who have exactly the same authority in the
+conference as you do. To add a Co-moderator type COMOD <username> from the
+Mod: prompt, to remove a Co-moderator type EXMOD <username> from the Mod:
+prompt. 
+
+Files In Conferences
+
+File Maintenance
+
+Now you have a conference, what about putting some files in it for people
+to download. Keeping with our example conference called building, we have
+set up a topic called files in which we have said we want to keep files.
+The first step is of course to upload some files into it. To do this you
+would just join the building conference as normal, choose the files topic
+and type FUL to upload the file (see the chapter Files in Depth for more
+information). Conference participants may also upload files to a conference
+topic, and it is one of the functions of the moderator to watch for this
+and to make the file available for download after checking that the file is
+intact, and that the participant was entitled to upload it.
+
+Once a file has been uploaded, to make it available to other participants,
+you will have to add a line to a text file that says where the file is,
+what its called and a description of what it does. This file is called the
+Flist, but more about that later.
+
+Files on CIX may be stored in two places, the first is the conference topic
+it was originally uploaded to. If you are a Moderator of the conference
+you are currently joined to, you can get a list of files using the FDIR
+command from the Read: prompt. These are files that have been uploaded, but
+are unavailable to participants, until the file name appears in the Flist.
+These files can only be made available for download from the topic they
+are in. As the lists of files in your topics gets larger, you may find it
+hard keeping track of the files in the FDIR list which already appear in
+the participants file list (FLIST). There is a command available to
+conference Moderators called ORPHANS which is available from the Mod:
+prompt. This simply lists the files in the FDIR which are not already in
+the FLIST.
+
+The second place files may be stored is called the Filepool. The Moderator
+of any conference may make any files in the Filepool available. A list of
+these files is available in a conference/topic called filepool/thelot,
+there are a lot of files in the Filepool. An example of a program stored in
+the Filepool is the file pkz110.exe which is a archiving / de-archiving
+program and is required to de-archive files with an .zip extension. This
+file is put, automatically, into every Flist in every conference, even
+though it's only stored in one place.
+
+To make a file available you firstly need to find out where it is. Lets
+assume you want to make two files available, one you have just uploaded
+called database.zip and one from the Filepool called pkunzip.exe. Next,
+you need to edit the topic files list (FLIST). To do this from the Main:
+prompt type:
+
+Main: mod <confname> flist <topic>
+
+You will be taken into the standard CIX editor with a copy of the Flist for
+that topic. See Chapter 10, Editing In Depth for information on how to use
+the CIX editors.
+
+The format for making a file available is as follows:
+
+c|<filename>|description
+
+Note: the | is a pipe character, ASCII 124.
+
+The c| tells CIX that the file can be found in the current topic. The
+filename is of course the name of the file you want to make available. The
+description is your description of the file. The c| and the filename must
+be in lower case, the filename must include the file extension, if it has
+one.
+
+So, to add the two files into the file list, once inside the editor and in
+appending mode, you would type:
+
+c|database.arc|Database program for builders.
+f|pkxarc.exe|Program to make database.arc usable.
+
+Notice the f| for the file pkxarc.exe, this tells CIX that the file is
+stored in the Filepool, as opposed to c| which tells CIX that the file
+database.arc is stored in the current topic.
+
+Exit from the editor and - presto! - the file is now available for
+download.
+
+You can also keep your own notes and comments in the flist (which will not
+be seen by any participants) with the # symbol.
+
+#||<comment>
+
+And you are able to add explanatory text to your flist, first by omitting
+the leading character like so:
+
+||any text
+
+And secondly, by using the '.' character, which unlike omitting the letter,
+makes the text you enter appear indented when it is displayed to the user.
+For example:
+
+.||any text
+
+With these commands you can format the Flist anyway you like. Here's a
+simple example.
+
+#|| My Flist (Last updated 10 July 1988)
+||
+||Filename	Size	Description
+||==============
+||
+f|pk361.exe|The file packer/unpacker used by CIX.
+||
+c|database.arc|Database program for builders,
+.|| written by John Bloggs, 10/4/89.
+||
+f|pkxarc.exe|Smaller version of the file unpacker.
+||
+||End of File List.
+
+will appear to the user as this...
+
+Read: flist
+Filename        Size  Description
+==================================
+pkx361.exe      70656  The file packer/unpacker used by CIX.
+database.arc    15932  Database program for builders.
+pkxarc.exe      15722  Smaller version of the file unpacker.
+End of the File List
+
+As Moderator you have the ability to examine the directory for a particular
+topic, to erase files, to copy files into the Filepool or to download
+files which are not yet available to normal participants. These commands
+are executed from the Read: prompt in the conference topic the
+files you want to manipulate are in.
+
+FDIR <filename>     Show directory for the current topic.
+FDL <filename>      Download <filename> from the current topic.
+FUL <filename>      Upload <filename> to the current topic.
+ERA <filename>      Delete <filename> from the current topic.
+REN <file1> file2>  Renames <file1> to <file2>
+FEXPORT <filename>  Copy the named file into the filepool for general use.
+
+Addendum to Moderate
+
+Topic size
+
+There is a limit to the size of each topic on CIX. If you want to
+see how much room the messages in the current topic take up, and how
+close to the limit, enter TOPICSIZE at the Mod:
+prompt. The maximum size a topic can grow to at present is 2 megabytes,
+we are intending to increase or abolish this limit at some time in
+the near future.
+
+Pruning conferences
+
+Withdrawn messages are not physically deleted by CIX so if you are
+running short of space in a topic, you may wish to physically remove
+the withdrawn messages in that topic. To do this type PRUNE
+at the Mod: prompt. The topic is temporarily made read-only
+while the topic is reorganised, so you should consider doing this
+at a non busy time, if possible.
+
+Co Moderators
+
+You should be warned that any co moderator has the same abilities
+as you so can COMOD other users or even EXMOD you so make sure you
+choose moderators you can trust.

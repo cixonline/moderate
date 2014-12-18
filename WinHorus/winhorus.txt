@@ -1,0 +1,77 @@
+WinHorus Windows Utility Library 3.00
+(c) 1993-1996 Horus Communications
+Distribution Notes
+
+Please read the copyleft.txt file before using or redistributing this
+library.
+
+
+The WinHorus distribution contains the following files:
+
+winhorus.txt	This file.
+
+copyleft.txt	The copyleft licence agreement for usage of this package.
+
+winhorus.doc	Documentation for WinHorus in Word for Windows 6.0 format.
+
+winhorus.dll	The Win16 version of the WinHorus dynamic link library.
+                This file should be installed in your Windows system
+                directory.
+
+winhorus.lib	The Win16 version of the WinHorus library. This library
+                should be included in the link phase of any program or DLL
+                using facilities from WinHorus.
+
+winhor32.dll	The Win32 version of the WinHorus dynamic link library.
+                This file should be installed in your Windows system
+                directory (or system32 directory if you're running NT).
+
+winh32bc.lib    The Win32 Borland C++ version of the WinHorus library.
+                This library should be included in the link phase of any
+                Borland C++ program or DLL using facilities from WinHorus.
+
+winh32vc.lib    The Win32 Microsoft VC++ version of the WinHorus library.
+                This library should be included in the link phase of any
+                Microsoft VC++ program or DLL using facilities from
+                WinHorus.
+
+winhorus.h      A standard C or C++ header file that contains definitions
+                of all the public WinHorus routines, data structures and
+                macros. This file should be included at the top of all
+                program modules that use WinHorus, after windows.h.
+
+windefs.h       Standard Windows definitions. This file is included in
+                winhorus.h.
+
+whutils.h       Utility routine definitions. This file is included in
+                winhorus.h.
+
+compat32.h      A header file containing Win16/Win32 compatibility
+                definitions. This file is included in winhorus.h.
+
+streamio.h      A header file containing all public definitions relevant to
+                the streamio package. This file is included in winhorus.h.
+
+gmalloc.h       A header file containing all public definitions relevant to
+                the gmalloc package. This file is included in winhorus.h.
+
+wnh_src.zip     The source files for WinHorus.
+
+
+Note that release 3.0 of WinHorus is also available for MVS. This
+distribution is for MS Windows only, the MVS-specific source and header
+files are not included.
+
+Rebuilding the library shouldn't normally be necessary, but should you make
+any changes or fix any bugs, please mail me .diff files of your
+modifications so that I can, if appropriate, include them in future
+distributions.
+
+Build files are included for Borland C++ (4.02 or later) and Microsoft VC++
+(1.52 16-bit or 4.x 32-bit).
+
+Please send any queries, bug reports, enhancements, used banknotes etc. to
+me at winhorus@horus.compulink.co.uk.
+
+Pete Jordan, 19th December 1996
+

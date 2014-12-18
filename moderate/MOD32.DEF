@@ -1,0 +1,11 @@
+LIBRARY MODERA32
+
+HEAPSIZE	16384
+
+EXPORTS
+	AddonVersion
+	Exec
+	Command
+	Load
+	Unload
+	QueryAddon

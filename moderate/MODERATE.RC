@@ -1,0 +1,1658 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "moderate.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "dlgs.h"
+#include "strings.h"
+#include "ameolapi.h"
+#ifndef APSTUDIO_INVOKED
+#include "moderatv.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_HELP_CONTENTS_24    BITMAP  DISCARDABLE     "BMP00006.BMP"
+IDB_HELP_CONTENTS_16    BITMAP  DISCARDABLE     "HELP_ABO.BMP"
+IDB_HELP_ABOUT_16       BITMAP  DISCARDABLE     "HELP_CON.BMP"
+IDB_HELP_ABOUT_24       BITMAP  DISCARDABLE     "BMP00007.BMP"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP2             BITMAP  DISCARDABLE     "MODERAT3.BMP"
+IDB_CREATE_CONF_16      BITMAP  DISCARDABLE     "CREATE_C.BMP"
+IDB_EDIT_TOPIC_16       BITMAP  DISCARDABLE     "EDIT_TOP.BMP"
+IDB_EDIT_FILELIST_16    BITMAP  DISCARDABLE     "EDIT_FIL.BMP"
+IDB_HELP_16             BITMAP  DISCARDABLE     "HELP.BMP"
+IDB_CREATE_CONF_24      BITMAP  DISCARDABLE     "BMP00001.BMP"
+IDB_EDIT_FILELIST_24    BITMAP  DISCARDABLE     "TEMP1.BMP"
+IDB_EDIT_TOPIC_24       BITMAP  DISCARDABLE     "BMP00002.BMP"
+IDB_HELP_24             BITMAP  DISCARDABLE     "BMP00003.BMP"
+IDB_SETTINGS_24         BITMAP  DISCARDABLE     "SET24.BMP"
+IDB_ABOUT_16            BITMAP  DISCARDABLE     "HELP_17.BMP"
+IDB_ABOUT_24            BITMAP  DISCARDABLE     "BMP00005.BMP"
+IDB_SETTINGS_16         BITMAP  DISCARDABLE     "BMP00004.BMP"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DID_FLIST DIALOG DISCARDABLE  6, 15, 420, 287
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File List Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FILE_LIST,9,22,349,217,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Mod's flist",IDT_MOD,9,246,36,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,50,246,138,8
+    LTEXT           "Fdir",IDT_FDIR,9,256,16,8
+    LTEXT           "<last downloaded>",CID_FLD_DATE,50,256,138,8
+    LTEXT           "Stats",IDT_STAT,9,266,20,8,NOT WS_VISIBLE
+    LTEXT           "<last downloaded>",CID_FLX_DATE,50,266,138,8,NOT 
+                    WS_VISIBLE
+    DEFPUSHBUTTON   "OK",CID_OK,363,22,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,363,38,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,363,54,48,14
+    PUSHBUTTON      "&Topic",CID_CHANGE_TOPIC,363,78,48,13
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,363,93,48,13
+    PUSHBUTTON      "&Insert",CID_INSERT,363,108,48,13
+    PUSHBUTTON      "&Append",CID_APPEND,363,123,48,13
+    PUSHBUTTON      "Up&date",CID_UPDATE_FILE,363,139,48,13
+    PUSHBUTTON      "&Edit",CID_EDIT,363,153,48,13
+    PUSHBUTTON      "Im&port",CID_IMPORT,363,168,48,13
+    PUSHBUTTON      "Move &up",CID_MOVE_UP,363,184,48,13
+    PUSHBUTTON      "&Move down",CID_MOVE_DOWN,363,198,48,13
+    PUSHBUTTON      "Acti&on",CID_ACTION,363,213,48,13
+    PUSHBUTTON      "&Sort flist",CID_SORT,363,228,48,13
+    PUSHBUTTON      "Upload &flist",CID_UPLOAD_FLIST,363,243,48,13
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,4,5,410,279
+END
+
+DID_FLIST_MISSING DIALOG DISCARDABLE  11, 22, 200, 112
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File List Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Forum:",-1,8,8,40,8
+    LTEXT           "<conf name>",CID_CONF_NAME,52,8,70,8
+    RTEXT           "Topic:",-1,8,19,40,8
+    LTEXT           "<topic name>",CID_TOPIC_NAME,52,19,70,8
+    GROUPBOX        "",-1,7,54,122,51
+    LTEXT           "This topic is not marked in Ameol as having a file list.",
+                    -1,8,35,120,20
+    CONTROL         "&Switch to another topic",CID_CHANGE_TOPIC,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,63,92,10
+    CONTROL         "&Create file list",CID_CREATE_FLIST,"Button",
+                    BS_AUTORADIOBUTTON,15,77,92,10
+    CONTROL         "&Assume and download",CID_ASSUME,"Button",
+                    BS_AUTORADIOBUTTON,15,91,92,10
+    PUSHBUTTON      "OK",CID_OK,145,8,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,145,24,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,145,40,48,14,WS_GROUP
+END
+
+DID_ABOUT DIALOG DISCARDABLE  13, 19, 236, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Moderate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",CID_OK,180,9,48,14
+    LTEXT           "Moder&ate...",CID_ABOUT_TEXT_CONFIGURE,65,26,102,8
+    PUSHBUTTON      "",CID_CONFIGURE,15,23,40,11
+    LTEXT           "Create C&IX Forum...",CID_ABOUT_TEXT_CONF,65,40,
+                    102,8
+    PUSHBUTTON      "",CID_ABOUT_CONF,15,39,40,11
+    LTEXT           "Edit CIX &Topics...",CID_ABOUT_TEXT_TOPIC,65,55,101,8
+    PUSHBUTTON      "",CID_ABOUT_TOPIC,15,53,40,11
+    LTEXT           "&Edit File List...",CID_ABOUT_TEXT_FLIST,65,71,102,8
+    PUSHBUTTON      "",CID_ABOUT_FLIST,15,69,40,11
+    PUSHBUTTON      "&Help",IDD_HELP,180,25,48,14
+    PUSHBUTTON      "&DLL info",CID_DLL_INFO,180,41,48,14
+    GROUPBOX        "Moderate Functions",-1,7,5,164,88
+    ICON            "IID_SCALES",-1,202,69,18,20
+    CONTROL         "",-1,"Static",SS_BLACKFRAME,198,65,30,28
+END
+
+DID_FILE_DESCRIPTION DIALOG DISCARDABLE  13, 23, 360, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit File List Entry"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "D&escription:",CID_TAG_DESCRIPTION,136,3,40,8
+    EDITTEXT        CID_FDESCRIPTION,136,13,220,32,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "D&escription:",CID_TAG_COMMENT_TEXT,8,1,40,8,NOT 
+                    WS_VISIBLE
+    EDITTEXT        CID_TABBED_TEXT,4,13,220,32,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | NOT WS_VISIBLE | 
+                    WS_HSCROLL
+    EDITTEXT        CID_COMMENT_TEXT,4,13,352,32,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | NOT WS_VISIBLE
+    PUSHBUTTON      "&Today's date",CID_INSERT_DATE,10,55,48,14
+    PUSHBUTTON      "&File date",CID_FILE_DATE,10,71,48,14
+    PUSHBUTTON      "&Previous",CID_PREVIOUS,70,55,48,14
+    PUSHBUTTON      "&Next",CID_NEXT,70,71,48,14
+    PUSHBUTTON      "&Undo",CID_UNDO,130,55,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,130,71,48,14
+    DEFPUSHBUTTON   "&Done all",CID_OK,304,72,48,16
+    LTEXT           "<date>",CID_DATE,32,26,92,8
+    RTEXT           "File:",CID_TAG_FILENAME,10,7,16,8
+    LTEXT           "<filename>",CID_FILENAME,32,7,72,8
+    RTEXT           "Size:",CID_TAG_SIZE,10,16,16,8
+    LTEXT           "<size>",CID_SIZE,32,16,52,8
+    RTEXT           "Date:",CID_TAG_DATE,6,26,20,8
+    RTEXT           "From:",CID_TAG_SOURCE,6,36,20,8
+    LTEXT           "<source>",CID_SOURCE,32,36,100,8
+    LTEXT           "<comment type>",CID_COMMENT_TYPE,56,1,60,8,NOT 
+                    WS_VISIBLE
+    GROUPBOX        "",-1,5,46,178,43
+END
+
+DID_SELECT_TOPIC DIALOG DISCARDABLE  18, 19, 207, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit File List - Select Topic"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Forum:",-1,14,10,40,8
+    COMBOBOX        CID_CONFERENCE,12,24,90,88,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Topic:",-1,108,10,20,8
+    COMBOBOX        CID_TOPIC,106,24,90,88,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",CID_OK,49,52,49,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,102,52,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,154,52,48,14
+    GROUPBOX        "",-1,5,2,197,42
+END
+
+DID_UPDATE_LISTS DIALOG DISCARDABLE  14, 20, 212, 138
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Refresh File Lists"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",CID_OK,157,4,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,157,20,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,157,36,48,14,WS_GROUP
+    GROUPBOX        "Download",-1,7,35,143,97
+    LTEXT           "&Moderator's File List",-1,12,47,64,8
+    CONTROL         "",CID_FLM_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    131,47,15,10
+    LTEXT           "<last updated>",CID_FLM_DATE,11,59,136,8
+    LTEXT           "File &Directory",-1,12,76,64,8
+    CONTROL         "",CID_FLD_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    131,76,15,10
+    LTEXT           "<last updated>",CID_FLD_DATE,11,88,136,8
+    LTEXT           "&User's File List",-1,12,105,64,8
+    CONTROL         "",CID_FLS_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    131,105,15,10
+    LTEXT           "<last updated>",CID_FLS_DATE,11,117,135,8
+    RTEXT           "Forum:",-1,8,7,40,8
+    LTEXT           "<conf name>",CID_CONF_NAME,52,7,70,8
+    RTEXT           "Topic:",-1,8,19,40,8
+    LTEXT           "<topic name>",CID_TOPIC_NAME,52,19,70,8
+END
+
+DID_RENAME DIALOG DISCARDABLE  15, 18, 200, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Rename:",-1,10,23,36,8
+    RTEXT           "&To:",-1,10,43,36,8
+    EDITTEXT        CID_NEWNAME,50,41,72,12,ES_LOWERCASE
+    DEFPUSHBUTTON   "OK",CID_OK,144,6,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,144,22,48,14
+    PUSHBUTTON      "&Cancel all",CID_CANCEL_ALL,144,38,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,144,54,48,14
+    EDITTEXT        CID_OLDNAME,50,21,72,12,ES_READONLY
+    GROUPBOX        "",-1,6,2,130,66
+END
+
+DID_INSERT_FDIR DIALOG DISCARDABLE  18, 18, 261, 193
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Select Orphan Files to Insert:",CID_INSERT_CAPTION,6,5,
+                    190,8
+    LISTBOX         CID_FDIR_LIST,6,15,194,166,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "<update date>",CID_UPDATE_DATE,6,180,188,8
+    DEFPUSHBUTTON   "OK",CID_OK,207,15,48,14
+    PUSHBUTTON      "&Cancel",CID_CANCEL,207,31,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,207,47,48,14
+    PUSHBUTTON      "&Sort",CID_SORT,207,79,48,14
+    PUSHBUTTON      "&Update",CID_UPDATE,207,95,48,14
+END
+
+DID_VALIDATE_DOWNLOAD DIALOG DISCARDABLE  18, 18, 200, 77
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Download File"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&As:",-1,10,52,36,8
+    EDITTEXT        CID_NEWNAME,50,50,72,12,ES_LOWERCASE
+    DEFPUSHBUTTON   "OK",CID_OK,145,7,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,145,23,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,145,39,48,14,WS_GROUP
+    GROUPBOX        "",-1,6,17,130,55
+    LTEXT           "CIX filename is not a valid local filename",-1,6,7,126,
+                    10
+    RTEXT           "&Download:",-1,10,32,36,8
+    EDITTEXT        CID_OLDNAME,50,30,72,12,ES_READONLY
+END
+
+DID_INSERT_FILEPOOL DIALOG DISCARDABLE  18, 18, 200, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Filepool"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",-1,6,3,130,50
+    LTEXT           "Enter &Filename to Insert:",CID_INSERT_CAPTION,16,14,84,
+                    8
+    EDITTEXT        CID_FILENAME,16,28,108,12
+    DEFPUSHBUTTON   "OK",CID_OK,144,7,48,14
+    PUSHBUTTON      "&Cancel",CID_CANCEL,144,23,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,144,39,48,14
+END
+
+DID_FLIST_ERROR DIALOG DISCARDABLE  7, 20, 343, 175
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Read Moderator's File List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "An error has occured during parsing of the Moderator's File List",
+                    CID_DESCRIPTION,6,10,212,8
+    RTEXT           "File:",-1,216,10,18,8
+    LTEXT           "<filename>",CID_FILENAME,240,10,48,8
+    RTEXT           "Line:",-1,216,22,18,8
+    LTEXT           "<line number>",CID_LINE_NUMBER,240,22,48,8
+    LTEXT           "Text",CID_ERR_TEXT_4,10,80,326,8
+    LTEXT           "Text",CID_ERR_TEXT_1,10,43,326,8
+    LTEXT           "Text",CID_ERR_TEXT_2,10,55,326,8
+    LTEXT           "Text",CID_ERR_TEXT_3,10,67,326,8
+    GROUPBOX        "",-1,5,94,150,75,WS_GROUP
+    CONTROL         "Convert the line to a valid &File line",CID_ERR_FILE,
+                    "Button",BS_AUTORADIOBUTTON,13,105,126,10
+    CONTROL         "Convert the line to a &Memo line",CID_ERR_MEMO,"Button",
+                    BS_AUTORADIOBUTTON,13,117,126,10
+    CONTROL         "Convert the line to a &Comment line",CID_ERR_COMMENT,
+                    "Button",BS_AUTORADIOBUTTON,13,129,126,10
+    CONTROL         "Convert the line to a &Indented line",CID_ERR_INDENTED,
+                    "Button",BS_AUTORADIOBUTTON,13,141,126,10
+    CONTROL         "&Discard the line",CID_ERR_DISCARD,"Button",
+                    BS_AUTORADIOBUTTON,13,153,126,10
+    PUSHBUTTON      "C&ontinue",CID_OK,289,123,48,14,WS_GROUP
+    PUSHBUTTON      "&Stop",CID_ABORT,289,139,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,289,155,48,14
+    GROUPBOX        "",-1,5,32,332,62
+END
+
+DID_DELETE_FLIST DIALOG DISCARDABLE  20, 18, 215, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete Files from Flist"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Flist Delete Confirmation",-1,7,7,145,73,WS_GROUP
+    CONTROL         "Con&firm deletion of each flist file",CID_CONFIRM_FLIST,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,20,
+                    134,10
+    CONTROL         "C&onfirm deletion of files from the fdir",
+                    CID_CONFIRM_FDIR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    15,36,132,10
+    CONTROL         "&Leave associated files in fdir",CID_LEAVE_FDIR,"Button",
+                    BS_AUTORADIOBUTTON,15,50,132,10
+    CONTROL         "Delete all a&ssociated files in fdir",
+                    CID_DELETE_ALL_FDIR,"Button",BS_AUTORADIOBUTTON,15,64,
+                    132,10
+    DEFPUSHBUTTON   "OK",CID_OK,160,8,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,160,24,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,160,40,48,14,WS_GROUP
+END
+
+DID_DUPLICATE DIALOG DISCARDABLE  23, 18, 200, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Duplicate Entry"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",-1,6,17,130,62
+    LTEXT           "<filename> is already in the file list",CID_DUP_TEXT,8,
+                    7,126,10
+    CONTROL         "&Cancel entry",CID_DUP_CANCEL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,14,31,66,10
+    CONTROL         "&Replace entry",CID_DUP_REPLACE,"Button",
+                    BS_AUTORADIOBUTTON,14,45,66,10
+    CONTROL         "&Duplicate entry",CID_DUP_DUPLICATE,"Button",
+                    BS_AUTORADIOBUTTON,14,59,66,10
+    DEFPUSHBUTTON   "OK",CID_OK,144,6,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,144,22,48,14
+END
+
+DID_CREATE_CONF DIALOG DISCARDABLE  17, 18, 244, 239
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Create Forum"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "For&um name",-1,7,7,112,47
+    EDITTEXT        CID_CONF_NAME,11,26,98,12,ES_LOWERCASE
+    GROUPBOX        "Forum &Description",CID_CONF_DESC_TAG,7,56,230,30
+    EDITTEXT        CID_CONF_DESCRIPTION,11,68,220,12
+    GROUPBOX        "Forum Type",-1,123,7,114,47
+    CONTROL         "Op&en",CID_CONF_OPEN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,136,17,76,10
+    CONTROL         "Clo&sed",CID_CONF_CLOSED,"Button",BS_AUTORADIOBUTTON,
+                    136,29,76,10
+    CONTROL         "Closed C&onfidential",CID_CONF_CONFIDENTIAL,"Button",
+                    BS_AUTORADIOBUTTON,136,41,76,10
+    EDITTEXT        CID_TOPIC_NAME,11,104,107,12,ES_LOWERCASE
+    LISTBOX         CID_TOPIC,17,119,101,55,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+    GROUPBOX        "To&pic Description",CID_TOPIC_DESC_TAG,12,179,220,30
+    EDITTEXT        CID_TOPIC_DESCRIPTION,17,191,209,12
+    PUSHBUTTON      "&Add",CID_ADD,130,104,48,13
+    PUSHBUTTON      "De&lete",CID_DELETE,183,104,48,13
+    PUSHBUTTON      "Forum &note",CID_CONF_NOTE,130,120,48,13,WS_GROUP
+    PUSHBUTTON      "Ed&it seed",CID_EDIT_SEED,183,120,48,13,WS_GROUP
+    GROUPBOX        "Topic Flags",-1,130,138,102,40
+    CONTROL         "Topic has &file list",CID_TOPIC_FLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,150,78,10
+    CONTROL         "&Read only topic",CID_TOPIC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,135,162,78,10
+    DEFPUSHBUTTON   "OK",CID_OK,84,218,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,136,218,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,188,218,48,14
+    GROUPBOX        "Topics",-1,7,93,230,122
+END
+
+DID_TOPIC_MAINTENANCE DIALOG DISCARDABLE  11, 23, 242, 199
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Moderate - Topic Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Fo&rum:",-1,5,9,42,8
+    COMBOBOX        CID_CONFERENCE,51,7,108,124,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Topics:",-1,19,28,28,8
+    EDITTEXT        CID_TOPIC_NAME,51,26,108,14,ES_LOWERCASE
+    LISTBOX         CID_TOPIC,62,45,98,36,LBS_OWNERDRAWFIXED | WS_VSCROLL
+    GROUPBOX        "To&pic Description",CID_TOPIC_DESC_TAG,5,110,232,30
+    EDITTEXT        CID_TOPIC_DESCRIPTION,11,122,220,12
+    PUSHBUTTON      "Ne&w topic",CID_ADD,187,7,48,14
+    PUSHBUTTON      "De&lete",CID_DELETE,187,58,48,14
+    PUSHBUTTON      "Prun&e...",CID_PRUNE,187,24,48,14
+    PUSHBUTTON      "&Update...",CID_UPDATE,187,75,48,14
+    PUSHBUTTON      "Forum &note",CID_CONF_NOTE,187,41,48,14,WS_GROUP
+    PUSHBUTTON      "Ed&it seed",CID_EDIT_SEED,187,92,48,14,WS_GROUP
+    GROUPBOX        "Topic Flags",-1,5,79,155,28
+    CONTROL         "Topic has &File List",CID_TOPIC_FLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,91,75,10
+    CONTROL         "&Read Only Topic",CID_TOPIC_READONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,90,91,69,10
+    GROUPBOX        "Topic Size (never updated)",CID_TOPIC_UPDATED,5,142,232,
+                    30
+    LTEXT           "0 bytes",CID_TOPIC_SIZE,9,156,50,8
+    LTEXT           "max:",-1,61,156,16,8
+    LTEXT           "2047000 bytes",CID_TOPIC_MAX,79,156,50,8
+    LTEXT           "free:",-1,131,156,16,8
+    LTEXT           "2047000 bytes",CID_TOPIC_FREE,149,156,50,8
+    RTEXT           "100",CID_TOPIC_PERCENT_FULL,200,156,14,8
+    LTEXT           "% full",-1,214,156,20,8
+    DEFPUSHBUTTON   "OK",CID_OK,85,179,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,137,179,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,189,179,48,14
+END
+
+DID_DLL_INFO DIALOG DISCARDABLE  18, 18, 151, 74
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "DLL Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",-1,7,2,137,48
+    LTEXT           "HCTools",-1,13,15,34,10
+    LTEXT           "version 1.0",CID_HCTOOLS_VERSION,49,15,88,10
+    LTEXT           "WinHorus",-1,13,30,34,10
+    LTEXT           "version 1.0",CID_WINHORUS_VERSION,49,30,89,10
+    DEFPUSHBUTTON   "OK",CID_OK,95,54,48,14
+END
+
+DID_NOTIFY_SELECT DIALOG DISCARDABLE  18, 18, 214, 68
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Notify"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Multiple File Notifications.",-1,6,7,82,10
+    GROUPBOX        "",-1,6,17,144,44
+    CONTROL         "Create a &single notification message",
+                    CID_NOTIFY_SINGLE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    14,28,132,12
+    CONTROL         "Create &multiple notification messages",
+                    CID_NOTIFY_MULTIPLE,"Button",BS_AUTORADIOBUTTON,14,42,
+                    132,12
+    DEFPUSHBUTTON   "OK",CID_OK,158,5,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,158,21,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,158,37,48,14
+END
+
+DID_MESSAGE_EDIT DIALOG DISCARDABLE  19, 18, 357, 244
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Message"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Forum:",-1,9,12,40,8
+    LTEXT           "<confname>",CID_CONF_NAME,52,12,64,8
+    LTEXT           "Topic:",-1,154,12,22,8
+    LTEXT           "<topicname>",CID_TOPIC_NAME,179,12,64,8
+    LTEXT           "T&itle:",-1,9,31,18,8
+    EDITTEXT        CID_MESSAGE_TITLE,31,29,190,12,ES_AUTOHSCROLL
+    EDITTEXT        CID_MESSAGE_TEXT,6,53,344,185,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "&Import",CID_IMPORT,227,28,38,14,WS_GROUP
+    PUSHBUTTON      "&Undo",CID_UNDO,269,10,38,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,269,28,38,14
+    DEFPUSHBUTTON   "&Save",CID_OK,311,10,38,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,311,28,38,14
+    GROUPBOX        "",-1,3,1,351,46
+END
+
+DID_SORT_FLIST DIALOG DISCARDABLE  10, 24, 199, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sort File List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Sort",CID_OK,144,8,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,144,24,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,144,40,48,14,WS_GROUP
+    GROUPBOX        "Sort the Selected Files in the Flist",-1,6,4,130,92
+    CONTROL         "Sort by &name",CID_SORT_NAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,16,66,10
+    CONTROL         "Sort by &date",CID_SORT_DATE,"Button",
+                    BS_AUTORADIOBUTTON,14,30,66,10
+    CONTROL         "Sort by si&ze",CID_SORT_SIZE,"Button",
+                    BS_AUTORADIOBUTTON,14,44,66,10
+    CONTROL         "As&cending sort",CID_SORT_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,65,66,10
+    CONTROL         "D&escending sort",CID_SORT_DESCENDING,"Button",
+                    BS_AUTORADIOBUTTON,14,79,66,10
+END
+
+DID_PRUNE_TOPIC DIALOG DISCARDABLE  17, 26, 195, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Prune Topic"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Forum:",-1,9,9,40,8
+    LTEXT           "<conf name>",CID_CONF_NAME,53,9,80,8
+    RTEXT           "Topic:",-1,9,21,40,8
+    LTEXT           "<topic name>",CID_TOPIC_NAME,53,21,80,8
+    GROUPBOX        "WARNING",-1,7,37,181,86
+    LTEXT           "1. Pruning a topic on CIX will permanently remove all withdrawn messages from the CIX message base; these could otherwise be restored.",
+                    -1,15,47,166,28
+    LTEXT           "2. CIX marks topics as read-only while they are being pruned. This means that users' blinks will fail if they attempt to post to the topic before the prune completes. Pruning can take a considerable time for large topics.",
+                    -1,15,77,164,42
+    CONTROL         "&Prune this Topic on CIX",CID_PRUNE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,128,106,12
+    DEFPUSHBUTTON   "OK",CID_OK,140,5,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,140,21,48,14
+END
+
+DID_DELETE_TOPIC DIALOG DISCARDABLE  18, 18, 200, 103
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete Topic"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Forum:",-1,12,7,40,8
+    LTEXT           "<conf name>",CID_CONF_NAME,56,7,80,8
+    RTEXT           "Topic:",-1,12,19,40,8
+    LTEXT           "<topic name>",CID_TOPIC_NAME,56,19,80,8
+    GROUPBOX        "WARNING",-1,7,34,130,62
+    LTEXT           "Are you sure you want to delete this topic from your forum on CIX?",
+                    -1,12,48,120,20
+    LTEXT           "Once deleted on CIX, the topic cannot be restored.",-1,
+                    12,71,120,20
+    PUSHBUTTON      "Cancel",CID_CANCEL,145,23,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,145,39,48,14
+    PUSHBUTTON      "&Delete",CID_DELETE,145,7,48,14,WS_GROUP
+END
+
+DID_IMPORT_NOTIFICATION DIALOG DISCARDABLE  26, 18, 342, 247
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Import Mail Notification"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Messages:",-1,4,7,36,8
+    LISTBOX         CID_MESSAGE_LIST,4,21,271,50,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        CID_MESSAGE_TEXT,2,88,338,156,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "&File:",-1,160,7,16,8
+    COMBOBOX        CID_FILENAME,182,4,93,68,CBS_DROPDOWNLIST | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",CID_OK,288,12,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,288,28,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,288,44,48,14
+    LTEXT           "Posted:",-1,4,75,28,8
+    LTEXT           "<date and time>",-1,32,75,94,8
+    CONTROL         "&All messages",CID_ALL_MESSAGES,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,130,74,56,12
+    CONTROL         "&Root messages",CID_ROOT_MESSAGES,"Button",
+                    BS_AUTORADIOBUTTON,194,74,64,12
+    CONTROL         "&Candidate messages",CID_CANDIDATE_MESSAGES,"Button",
+                    BS_AUTORADIOBUTTON,260,74,80,12
+END
+
+DID_IMPORT_SELECT DIALOG DISCARDABLE  18, 18, 263, 130
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Import File Descriptions"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File &Name:",1090,5,5,76,9
+    EDITTEXT        1152,5,15,90,12,ES_AUTOHSCROLL | ES_OEMCONVERT
+    LISTBOX         1120,5,31,90,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Directories:",-1,110,19,54,9
+    LISTBOX         1121,109,31,92,68,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_DISABLENOSCROLL | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "List Files of &Type:",1089,5,98,90,9
+    COMBOBOX        1136,5,109,90,68,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Dri&ves:",1091,109,98,92,9
+    COMBOBOX        1137,109,109,92,68,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | WS_BORDER | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",1,209,6,48,14,WS_GROUP
+    PUSHBUTTON      "Cancel",2,209,22,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",1038,209,39,48,14,WS_GROUP
+    CONTROL         "&Read Only",1040,"Button",BS_AUTOCHECKBOX | NOT 
+                    WS_VISIBLE | WS_GROUP | WS_TABSTOP,211,65,47,10
+    LTEXT           "Description &Field Number:",-1,214,89,44,18
+    COMBOBOX        CID_FIELD_SELECT,214,109,40,54,CBS_DROPDOWNLIST | 
+                    WS_TABSTOP
+END
+
+DID_EXPORT DIALOG DISCARDABLE  20, 18, 188, 78
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Export to Filepool"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "File:",-1,6,6,16,8
+    LTEXT           "<file name>",CID_FILENAME,21,6,104,8
+    GROUPBOX        "",-1,6,16,115,55
+    CONTROL         "Refer to &local file",CID_LOCAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,14,24,74,14
+    CONTROL         "E&xport to filepool",CID_EXPORT,"Button",
+                    BS_AUTORADIOBUTTON,14,38,74,14
+    CONTROL         "&Refer to existing filepool file",CID_TRANSFORM,"Button",
+                    BS_AUTORADIOBUTTON,14,52,100,14
+    DEFPUSHBUTTON   "OK",CID_OK,132,6,48,14,WS_GROUP
+    PUSHBUTTON      "&Help",IDD_HELP,132,38,48,14
+    DEFPUSHBUTTON   "Cancel",CID_CANCEL,132,22,48,14,WS_GROUP
+END
+
+DID_CONF_NOTE DIALOG DISCARDABLE  18, 18, 357, 239
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Forum Note"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Forum:",-1,7,8,40,8
+    LTEXT           "<confname>",CID_CONF_NAME,48,8,64,8
+    EDITTEXT        CID_MESSAGE_TEXT,7,25,343,194,ES_MULTILINE | 
+                    ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "&Undo",CID_UNDO,143,7,38,14,WS_GROUP
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD,185,7,38,14,WS_GROUP
+    DEFPUSHBUTTON   "OK",CID_OK,227,7,38,14,WS_GROUP
+    PUSHBUTTON      "Cancel",CID_CANCEL,269,7,38,14
+    PUSHBUTTON      "&Help",IDD_HELP,311,7,38,14
+    LTEXT           "Last updated on Thu, Aug 18 1994 at 11:35 AM",
+                    CID_UPDATE_DATE,7,222,343,10
+END
+
+DID_UPDATE_TOPIC_FRAME DIALOG DISCARDABLE  6, 15, 207, 251
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Update Topic Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Forum:",-1,6,12,40,8
+    LTEXT           "<conf name>",CID_CONF_NAME,52,12,70,8
+    RTEXT           "&Topic:",-1,22,31,23,8
+    COMBOBOX        CID_TOPIC,52,28,84,88,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",CID_UPDATE_TOPIC_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,4,62,198,184
+    DEFPUSHBUTTON   "OK",IDOK,153,6,48,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,22,48,14
+    PUSHBUTTON      "Help",IDD_HELP,153,38,48,14
+END
+
+DID_UPDATE_TOPIC_SIZES DIALOG DISCARDABLE  6, 15, 207, 251
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Update topic &list next blink",CID_UPDATE_TOPICS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,96,100,12
+    CONTROL         "Update topic size &next blink",CID_UPDATE_NEXT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,110,102,12
+    CONTROL         "Topic si&ze warnings enabled",CID_TOPICSIZE_WARNING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,124,108,12
+    CONTROL         "&Warn when topic is over",CID_TOPICSIZE_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,19,138,92,12
+    EDITTEXT        CID_TOPICSIZE_THRESHOLD,113,138,16,12,WS_GROUP
+    LTEXT           "% &full",CID_TOPICSIZE_TAG,133,140,20,8
+    GROUPBOX        "Update Topic Size",-1,12,170,134,60
+    CONTROL         "&Manual updates only",CID_UPDATE_MANUAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,184,118,12
+    CONTROL         "&Update every",CID_UPDATE_PERIODIC,"Button",
+                    BS_AUTORADIOBUTTON,18,198,58,12
+    CONTROL         "Update &every blink",CID_UPDATE_ALWAYS,"Button",
+                    BS_AUTORADIOBUTTON,18,212,118,12
+    EDITTEXT        CID_UPDATE_DAYS,76,198,18,12,WS_GROUP
+    LTEXT           "days",CID_TAG_DAYS,98,200,24,8
+    PUSHBUTTON      "&Reset",CID_RESET,158,215,34,15
+    GROUPBOX        "",-1,13,84,149,74
+    CONTROL         "",CID_UPDATE_TOPIC_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP,4,62,198,184
+END
+
+DID_UPDATE_TOPIC_FLISTS DIALOG DISCARDABLE  11, 17, 207, 251
+STYLE WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Moderator's file list",-1,18,80,64,8
+    CONTROL         "",CID_FLM_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    123,80,14,10
+    LTEXT           "<last updated>",CID_FLM_DATE,20,92,118,8
+    LTEXT           "File &directory",-1,18,111,64,8
+    CONTROL         "",CID_FLD_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    123,111,14,10
+    LTEXT           "<last updated>",CID_FLD_DATE,20,123,118,8
+    LTEXT           "&User's file list",-1,18,142,64,8
+    CONTROL         "",CID_FLS_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    123,142,14,10
+    LTEXT           "<last updated>",CID_FLS_DATE,20,154,118,8
+    GROUPBOX        "Update File Lists",-1,12,179,134,56
+    CONTROL         "&Manual updates only",CID_UPDATE_MANUAL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,191,118,12
+    CONTROL         "&Update every",CID_UPDATE_PERIODIC,"Button",
+                    BS_AUTORADIOBUTTON,18,205,58,12
+    CONTROL         "Update &every blink",CID_UPDATE_ALWAYS,"Button",
+                    BS_AUTORADIOBUTTON,18,219,118,12
+    EDITTEXT        CID_UPDATE_DAYS,76,205,18,12,WS_GROUP
+    LTEXT           "days",CID_TAG_DAYS,98,207,24,8
+    GROUPBOX        "Download",-1,12,69,133,100
+    CONTROL         "",CID_UPDATE_TOPIC_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS,4,62,198,184
+END
+
+DID_CONFIG_GENERAL DIALOG DISCARDABLE  5, 6, 200, 224
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Download to:",-1,14,8,48,10
+    EDITTEXT        CID_DOWNLOAD_DIR,14,20,138,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",CID_DOWNLOAD_BROWSE,156,19,32,14
+    LTEXT           "&Upload from:",-1,14,39,48,10
+    EDITTEXT        CID_UPLOAD_DIR,14,51,138,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Bro&wse",CID_UPLOAD_BROWSE,156,50,32,14
+    CONTROL         "&Remember Last Upload Directory Used",CID_REMEMBER_UP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,69,118,10
+    LTEXT           "Date f&ormat:",-1,14,85,42,10
+    RTEXT           "date example",CID_DATE_EXAMPLE,60,85,92,9
+    EDITTEXT        CID_DATE_FORMAT,14,97,138,12,ES_AUTOHSCROLL
+    CONTROL         "Prefi&x menu entries with ""Mod: """,CID_MENU_PREFIX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,123,118,10
+    GROUPBOX        "Topic Maintenance",-1,12,143,176,56,WS_GROUP
+    CONTROL         "Ed&it seed messages on topic creation",CID_EDIT_SEED,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,20,155,
+                    134,10
+    CONTROL         "Topic si&ze warnings enabled",CID_TOPICSIZE_WARNING,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,20,169,
+                    106,10
+    CONTROL         "Allow &local deletion of topics",CID_LOCAL_TOPIC_DELETE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,20,183,
+                    106,10
+END
+
+DID_CONFIG_FLIST DIALOG DISCARDABLE  6, 15, 200, 237
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Flist Sort",IDC_STATIC,12,6,176,56,WS_GROUP
+    CONTROL         "Sort by &name",CID_FLIST_SORT_NAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,20,18,66,10
+    CONTROL         "Sort by &date",CID_FLIST_SORT_DATE,"Button",
+                    BS_AUTORADIOBUTTON,20,32,66,10
+    CONTROL         "Sort by si&ze",CID_FLIST_SORT_SIZE,"Button",
+                    BS_AUTORADIOBUTTON,20,46,66,10
+    CONTROL         "As&cending sort",CID_FLIST_SORT_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,114,18,66,10
+    CONTROL         "D&escending sort",CID_FLIST_SORT_DESCENDING,"Button",
+                    BS_AUTORADIOBUTTON,114,32,66,10
+    GROUPBOX        "Flist File Notification",IDC_STATIC,12,65,176,95,
+                    WS_GROUP
+    CONTROL         "A&uto-notify on file insertion",CID_AUTO_NOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,77,130,10
+    CONTROL         "Add si&gnature",CID_NOTIFY_SIGNATURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,88,78,10
+    CONTROL         "Include size in &title",CID_NOTIFY_SIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,20,99,78,10
+    CONTROL         "U&pper case file names",CID_NOTIFY_UPPERCASE,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,20,110,86,10
+    CONTROL         "Add OS and Status to &Notification header",
+                    CID_NOTIFY_OS_STATUS,"Button",BS_AUTO3STATE | WS_TABSTOP,
+                    20,121,146,10
+    GROUPBOX        "Flist Delete Confirmation",IDC_STATIC,12,165,176,63,
+                    WS_GROUP
+    CONTROL         "Con&firm deletion of each flist file",CID_CONFIRM_FLIST,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,20,176,
+                    134,10
+    CONTROL         "C&onfirm deletion of files from the fdir",
+                    CID_CONFIRM_FDIR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    20,190,132,10
+    CONTROL         "&Leave associated files in fdir",CID_LEAVE_FDIR,"Button",
+                    BS_AUTORADIOBUTTON,20,201,132,10
+    CONTROL         "Delete all a&ssociated files in fdir",
+                    CID_DELETE_ALL_FDIR,"Button",BS_AUTORADIOBUTTON,20,212,
+                    132,10
+    LTEXT           "Notification &Messages",IDC_STATIC,20,133,70,8
+    CONTROL         "Prompt",CID_NOTIFY_PROMPT,"Button",BS_AUTORADIOBUTTON,
+                    48,145,38,10
+    CONTROL         "Multiple",CID_NOTIFY_MULTIPLE,"Button",
+                    BS_AUTORADIOBUTTON,93,145,40,10
+    CONTROL         "Single",CID_NOTIFY_SINGLE,"Button",BS_AUTORADIOBUTTON,
+                    140,145,35,10
+END
+
+DID_CONFIG_FDIR DIALOG DISCARDABLE  6, 15, 200, 237
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Fdir Display",-1,12,6,176,56,WS_GROUP
+    CONTROL         "&Orphans",CID_ORPHANS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,20,18,66,10
+    CONTROL         "Files in &flist",CID_IN_FLIST,"Button",
+                    BS_AUTORADIOBUTTON,20,32,66,10
+    CONTROL         "A&ll files",CID_ALL_FILES,"Button",BS_AUTORADIOBUTTON,
+                    20,46,66,10
+    GROUPBOX        "Fdir Sort",-1,12,68,176,56,WS_GROUP
+    CONTROL         "Sort by &name",CID_SORT_NAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,20,80,66,10
+    CONTROL         "Sort by &date",CID_SORT_DATE,"Button",
+                    BS_AUTORADIOBUTTON,20,94,66,10
+    CONTROL         "Sort by si&ze",CID_SORT_SIZE,"Button",
+                    BS_AUTORADIOBUTTON,20,108,66,10
+    CONTROL         "As&cending sort",CID_SORT_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,114,80,66,10
+    CONTROL         "D&escending sort",CID_SORT_DESCENDING,"Button",
+                    BS_AUTORADIOBUTTON,114,94,66,10
+    GROUPBOX        "Fdir Delete Confirmation",-1,12,130,176,56,WS_GROUP
+    CONTROL         "Confir&m delete for each file",CID_CONFIRM_ALL_FDIR,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,20,142,132,10
+    CONTROL         "Conf&irm deletion of files in flist",
+                    CID_CONFIRM_FLIST_FDIR,"Button",BS_AUTORADIOBUTTON,20,
+                    156,132,10
+    CONTROL         "Dele&te all files without confirmation",
+                    CID_CONFIRM_NONE_FDIR,"Button",BS_AUTORADIOBUTTON,20,170,
+                    132,10
+END
+
+DID_FILE_DIRECTORY DIALOG DISCARDABLE  6, 15, 420, 287
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FDIR_LIST,9,22,348,215,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Mod's flist",IDT_MOD,9,246,36,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,50,246,138,8
+    LTEXT           "Fdir",IDT_FDIR,9,256,16,8
+    LTEXT           "<last downloaded>",CID_FLD_DATE,50,256,138,8
+    LTEXT           "Stats",IDT_STAT,9,266,20,8,NOT WS_VISIBLE
+    LTEXT           "<last downloaded>",CID_FLX_DATE,50,266,138,8,NOT 
+                    WS_VISIBLE
+    DEFPUSHBUTTON   "OK",CID_OK,363,22,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,363,38,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,363,54,48,14
+    PUSHBUTTON      "&Topic",CID_CHANGE_TOPIC,363,84,48,14
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,363,100,48,14
+    PUSHBUTTON      "&Insert",CID_INSERT,363,116,48,14
+    PUSHBUTTON      "&Append",CID_APPEND,363,132,48,14
+    PUSHBUTTON      "Up&date",CID_UPDATE_FILE,363,148,48,14
+    PUSHBUTTON      "Actio&n",CID_ACTION,363,164,48,14
+    PUSHBUTTON      "&Sort",CID_SORT,363,180,48,14
+    GROUPBOX        "View",IDT_VIEW,363,208,48,48
+    CONTROL         "&Orphans",CID_ORPHANS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,367,219,42,10
+    CONTROL         "In &flist",CID_IN_FLIST,"Button",BS_AUTORADIOBUTTON,367,
+                    231,42,10
+    CONTROL         "A&ll files",CID_ALL_FILES,"Button",BS_AUTORADIOBUTTON,
+                    367,243,42,10
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",NOT WS_VISIBLE | 
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,4,5,410,279
+END
+
+DID_FILE_STATISTICS DIALOG DISCARDABLE  6, 15, 361, 271
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File Download Statistics"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FDIR_LIST,9,24,292,227,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Mod's flist",-1,8,256,36,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,44,256,72,8
+    LTEXT           "Fdir",-1,118,256,16,8
+    LTEXT           "<last downloaded>",CID_FLD_DATE,134,256,72,8
+    LTEXT           "Stats",-1,208,256,20,8
+    LTEXT           "<last downloaded>",CID_FLX_DATE,228,256,72,8
+    DEFPUSHBUTTON   "OK",CID_OK,306,25,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,306,41,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,306,57,48,14
+    PUSHBUTTON      "&Topic...",CID_CHANGE_TOPIC,306,79,48,14
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,306,95,48,14
+    LISTBOX         CID_STAT_LIST,307,117,45,108,LBS_MULTIPLESEL | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Display",-1,306,228,48,36
+    CONTROL         "&All data",CID_STAT_ALL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,310,239,42,10
+    CONTROL         "&Selection",CID_STAT_SELECTED,"Button",
+                    BS_AUTORADIOBUTTON,310,251,42,10
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,4,5,354,263
+END
+
+DID_FLIST_FRAME DIALOG DISCARDABLE  6, 15, 420, 287
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File List Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,4,4,412,282
+    PUSHBUTTON      "Button1",990,369,272,50,14
+END
+
+DID_USERFLIST DIALOG DISCARDABLE  6, 15, 359, 269
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File List"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FILE_LIST,7,28,292,227,LBS_MULTIPLESEL | 
+                    LBS_OWNERDRAWFIXED | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Users' file list last refreshed:",-1,8,254,95,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,104,254,110,8
+    DEFPUSHBUTTON   "OK",CID_OK,305,28,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,305,44,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,305,60,48,14
+    PUSHBUTTON      "&Topic...",CID_CHANGE_TOPIC,305,81,48,14
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,305,97,48,14
+    PUSHBUTTON      "&Download",CID_DOWNLOAD,305,113,48,14
+    PUSHBUTTON      "&Upload",309,305,129,48,14
+    PUSHBUTTON      "&Find",CID_APPEND,305,145,48,14
+    PUSHBUTTON      "Find &next",308,305,161,48,14
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,2,4,354,263
+END
+
+IDD_WorkSpace DIALOG DISCARDABLE  0, 0, 462, 333
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,405,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,405,24,50,14
+    CONTROL         "",CID_FLIST_FRAME,"amxctl_SysTabControl",NOT WS_VISIBLE | 
+                    WS_CLIPSIBLINGS | WS_TABSTOP | 0x800,2,5,354,263
+END
+
+DID_REAL_ABOUT DIALOG DISCARDABLE  0, 0, 223, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About Moderate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Ameol Moderator Functions Addon",IDC_APPTITLE,54,7,161,
+                    10,SS_NOPREFIX
+    LTEXT           "© 1993-2014 CIX Online Ltd. All Rights Reserved",IDC_COPYRIGHT,
+                    54,17,161,8,SS_NOPREFIX
+    LTEXT           "(Version)",CID_VERSIONTEXT,54,27,161,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,166,74,50,14
+    ICON            "IID_SCALES",IDC_STATIC,7,7,21,20
+    LTEXT           "Moderate includes WinHorus / HCTools Libraries\nCopyLeft Pete Horus",
+                    IDC_STATIC,55,43,161,23
+END
+
+DID_FLIST_NEW DIALOG DISCARDABLE  6, 15, 420, 287
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File List Maintenance"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FILE_LIST,9,22,341,224,LBS_OWNERDRAWFIXED | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Mod's flist",-1,9,246,36,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,50,246,138,8
+    LTEXT           "Fdir",-1,9,256,16,8
+    LTEXT           "<last downloaded>",CID_FLD_DATE,50,256,138,8
+    LTEXT           "Stats",-1,9,266,20,8,NOT WS_VISIBLE
+    LTEXT           "<last downloaded>",CID_FLX_DATE,50,266,138,8,NOT 
+                    WS_VISIBLE
+    DEFPUSHBUTTON   "OK",CID_OK,360,22,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,360,38,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,360,54,48,14
+    PUSHBUTTON      "&Topic",CID_CHANGE_TOPIC,360,78,48,13
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,360,93,48,13
+    PUSHBUTTON      "&Insert",CID_INSERT,360,108,48,13
+    PUSHBUTTON      "&Append",CID_APPEND,360,123,48,13
+    PUSHBUTTON      "Up&date",CID_UPDATE_FILE,360,139,48,13
+    PUSHBUTTON      "&Edit",CID_EDIT,360,153,48,13
+    PUSHBUTTON      "Im&port",CID_IMPORT,360,168,48,13
+    PUSHBUTTON      "Move &up",CID_MOVE_UP,360,184,48,13
+    PUSHBUTTON      "&Move down",CID_MOVE_DOWN,360,198,48,13
+    PUSHBUTTON      "Acti&on",CID_ACTION,360,213,48,13
+    PUSHBUTTON      "&Sort flist",CID_SORT,360,228,48,13
+    PUSHBUTTON      "Upload &flist",CID_UPLOAD_FLIST,360,243,48,13
+END
+
+DID_FILE_DIRECTORY_NEW DIALOG DISCARDABLE  6, 15, 420, 287
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "File Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         CID_FDIR_LIST,9,22,341,220,LBS_OWNERDRAWFIXED | 
+                    LBS_EXTENDEDSEL | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "Mod's flist",-1,9,246,36,8
+    LTEXT           "<last downloaded>",CID_FLM_DATE,50,246,138,8
+    LTEXT           "Fdir",-1,9,256,16,8
+    LTEXT           "<last downloaded>",CID_FLD_DATE,50,256,138,8
+    LTEXT           "Stats",-1,9,266,20,8,NOT WS_VISIBLE
+    LTEXT           "<last downloaded>",CID_FLX_DATE,50,266,138,8,NOT 
+                    WS_VISIBLE
+    DEFPUSHBUTTON   "OK",CID_OK,360,22,48,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,360,38,48,14
+    PUSHBUTTON      "&Help",IDD_HELP,360,54,48,14
+    PUSHBUTTON      "&Topic",CID_CHANGE_TOPIC,360,84,48,14
+    PUSHBUTTON      "&Refresh",CID_DOWNLOAD_LISTS,360,100,48,14
+    PUSHBUTTON      "&Insert",CID_INSERT,360,116,48,14
+    PUSHBUTTON      "&Append",CID_APPEND,360,132,48,14
+    PUSHBUTTON      "Up&date",CID_UPDATE_FILE,360,148,48,14
+    PUSHBUTTON      "Actio&n",CID_ACTION,360,164,48,14
+    PUSHBUTTON      "&Sort",CID_SORT,360,180,48,14
+    GROUPBOX        "View",-1,360,208,48,48
+    CONTROL         "&Orphans",CID_ORPHANS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,364,219,42,10
+    CONTROL         "In &flist",CID_IN_FLIST,"Button",BS_AUTORADIOBUTTON,364,
+                    231,42,10
+    CONTROL         "A&ll files",CID_ALL_FILES,"Button",BS_AUTORADIOBUTTON,
+                    364,243,42,10
+END
+
+AMEOL_SAY DIALOG FIXED IMPURE  52, 50, 279, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Message"
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        CID_MESSAGE_TEXT,3,75,272,126,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL
+    RTEXT           "&Forum:",-1,2,8,48,8
+    COMBOBOX        CID_CONF_NAME,54,7,149,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Topic:",7100,2,24,48,8
+    COMBOBOX        CID_TOPIC_NAME,54,23,149,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Subject T&itle:",-1,2,40,48,8
+    EDITTEXT        CID_MESSAGE_TITLE,54,39,149,12,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    RTEXT           "Si&gnature:",7117,14,57,36,8
+    COMBOBOX        CID_SIG,54,55,58,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Save",CID_OK,218,7,50,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,218,24,50,14
+    PUSHBUTTON      "&Help",IDD_HELP,218,42,50,14
+END
+
+DID_CONFIG_FDIR_CA DIALOG DISCARDABLE  6, 15, 238, 210
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Fdir Display",IDC_STATIC,52,14,176,56,WS_GROUP
+    CONTROL         "&Orphans",CID_ORPHANS,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,60,26,66,10
+    CONTROL         "Files in &flist",CID_IN_FLIST,"Button",
+                    BS_AUTORADIOBUTTON,60,40,66,10
+    CONTROL         "A&ll files",CID_ALL_FILES,"Button",BS_AUTORADIOBUTTON,
+                    60,54,66,10
+    GROUPBOX        "Fdir Sort",IDC_STATIC,52,76,176,56,WS_GROUP
+    CONTROL         "Sort by &name",CID_SORT_NAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,60,88,66,10
+    CONTROL         "Sort by &date",CID_SORT_DATE,"Button",
+                    BS_AUTORADIOBUTTON,60,102,66,10
+    CONTROL         "Sort by si&ze",CID_SORT_SIZE,"Button",
+                    BS_AUTORADIOBUTTON,60,116,66,10
+    CONTROL         "As&cending sort",CID_SORT_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,154,88,66,10
+    CONTROL         "D&escending sort",CID_SORT_DESCENDING,"Button",
+                    BS_AUTORADIOBUTTON,154,102,66,10
+    GROUPBOX        "Fdir Delete Confirmation",IDC_STATIC,52,138,176,56,
+                    WS_GROUP
+    CONTROL         "Confir&m delete for each file",CID_CONFIRM_ALL_FDIR,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,60,150,132,10
+    CONTROL         "Conf&irm deletion of files in flist",
+                    CID_CONFIRM_FLIST_FDIR,"Button",BS_AUTORADIOBUTTON,60,
+                    164,132,10
+    CONTROL         "Dele&te all files without confirmation",
+                    CID_CONFIRM_NONE_FDIR,"Button",BS_AUTORADIOBUTTON,60,178,
+                    132,10
+    ICON            CA_IID_SCALES,IDC_STATIC,12,12,20,20
+    GROUPBOX        "",IDC_STATIC,46,7,187,195
+END
+
+DID_CONFIG_FLIST_CA DIALOG DISCARDABLE  6, 15, 238, 248
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            CA_IID_SCALES,IDC_STATIC,12,12,20,20
+    GROUPBOX        "Flist Sort",IDC_STATIC,52,14,176,49,WS_GROUP
+    CONTROL         "Sort by &name",CID_FLIST_SORT_NAME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,60,26,66,10
+    CONTROL         "Sort by &date",CID_FLIST_SORT_DATE,"Button",
+                    BS_AUTORADIOBUTTON,60,37,66,10
+    CONTROL         "Sort by si&ze",CID_FLIST_SORT_SIZE,"Button",
+                    BS_AUTORADIOBUTTON,60,48,66,10
+    CONTROL         "As&cending sort",CID_FLIST_SORT_ASCENDING,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,154,26,66,10
+    CONTROL         "D&escending sort",CID_FLIST_SORT_DESCENDING,"Button",
+                    BS_AUTORADIOBUTTON,154,37,66,10
+    GROUPBOX        "Flist File Notification",IDC_STATIC,52,67,176,104,
+                    WS_GROUP
+    CONTROL         "A&uto-notify on file insertion",CID_AUTO_NOTIFY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,79,130,10
+    CONTROL         "Add si&gnature",CID_NOTIFY_SIGNATURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,91,78,10
+    CONTROL         "Include size in &title",CID_NOTIFY_SIZE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,60,103,78,10
+    CONTROL         "U&pper case file names",CID_NOTIFY_UPPERCASE,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,60,115,86,10
+    CONTROL         "Add OS and Status to Not&ification header",
+                    CID_NOTIFY_OS_STATUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,60,127,146,10
+    GROUPBOX        "Flist Delete Confirmation",IDC_STATIC,51,175,176,63,
+                    WS_GROUP
+    CONTROL         "Con&firm deletion of each flist file",CID_CONFIRM_FLIST,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,60,186,
+                    134,10
+    CONTROL         "C&onfirm deletion of files from the fdir",
+                    CID_CONFIRM_FDIR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    60,199,132,10
+    CONTROL         "&Leave associated files in fdir",CID_LEAVE_FDIR,"Button",
+                    BS_AUTORADIOBUTTON,60,211,132,10
+    CONTROL         "Delete all a&ssociated files in fdir",
+                    CID_DELETE_ALL_FDIR,"Button",BS_AUTORADIOBUTTON,60,224,
+                    132,10
+    GROUPBOX        "",IDC_STATIC,46,7,187,236
+    LTEXT           "Notification &Messages",IDC_STATIC,60,141,70,8
+    CONTROL         "Prompt",CID_NOTIFY_PROMPT,"Button",BS_AUTORADIOBUTTON,
+                    88,154,38,10
+    CONTROL         "Multiple",CID_NOTIFY_MULTIPLE,"Button",
+                    BS_AUTORADIOBUTTON,133,154,40,10
+    CONTROL         "Single",CID_NOTIFY_SINGLE,"Button",BS_AUTORADIOBUTTON,
+                    180,154,35,10
+END
+
+DID_CONFIG_GENERAL_CA DIALOG DISCARDABLE  5, 6, 239, 219
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Download to:",IDC_STATIC,53,16,48,10
+    EDITTEXT        CID_DOWNLOAD_DIR,53,28,138,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse",CID_DOWNLOAD_BROWSE,195,27,32,14
+    LTEXT           "&Upload from:",IDC_STATIC,53,47,48,10
+    EDITTEXT        CID_UPLOAD_DIR,53,59,138,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Bro&wse",CID_UPLOAD_BROWSE,195,58,32,14
+    CONTROL         "&Remember Last Upload Directory Used",CID_REMEMBER_UP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,77,118,10
+    LTEXT           "Date f&ormat:",IDC_STATIC,53,93,42,10
+    RTEXT           "date example",CID_DATE_EXAMPLE,99,93,92,9
+    EDITTEXT        CID_DATE_FORMAT,53,105,138,12,ES_AUTOHSCROLL
+    CONTROL         "Prefi&x menu entries with ""Mod: """,CID_MENU_PREFIX,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,131,118,10
+    GROUPBOX        "Topic Maintenance",IDC_STATIC,51,151,176,56,WS_GROUP
+    CONTROL         "Ed&it seed messages on topic creation",CID_EDIT_SEED,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,59,163,
+                    134,10
+    CONTROL         "Topic si&ze warnings enabled",CID_TOPICSIZE_WARNING,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,59,177,
+                    106,10
+    CONTROL         "Allow &local deletion of topics",CID_LOCAL_TOPIC_DELETE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,59,191,
+                    106,10
+    ICON            CA_IID_SCALES,IDC_STATIC,12,12,21,20
+    GROUPBOX        "",IDC_STATIC,46,7,187,206
+END
+
+AMEOL_MAIL DIALOG FIXED IMPURE  52, 50, 279, 204
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New Message"
+FONT 8, "Helv"
+BEGIN
+    EDITTEXT        CID_MESSAGE_TEXT,3,75,272,126,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_NOHIDESEL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    RTEXT           "&Forum:",-1,2,8,48,8
+    COMBOBOX        CID_CONF_NAME,54,7,149,54,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Topic:",7100,2,24,48,8
+    COMBOBOX        CID_TOPIC_NAME,54,23,149,54,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Subject T&itle:",-1,2,40,48,8
+    EDITTEXT        CID_MESSAGE_TITLE,54,39,149,12,ES_AUTOHSCROLL | 
+                    ES_NOHIDESEL
+    RTEXT           "Si&gnature:",7117,14,57,36,8
+    COMBOBOX        CID_SIG,54,55,58,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Save",CID_OK,218,7,50,14
+    PUSHBUTTON      "Cancel",CID_CANCEL,218,24,50,14
+    PUSHBUTTON      "&Help",IDD_HELP,218,42,50,14
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "moderate.h\0"
+    "\0"
+    "\0"
+    "\0"
+    "\0"
+    "\0"
+    "\0"
+    "\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""dlgs.h""\r\n"
+    "#include ""strings.h""\r\n"
+    "#include ""ameolapi.h""\r\n"
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""moderatv.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MID_APPEND MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "From F&dir",                  CID_APPEND_FDIR
+        MENUITEM "From &Filepool",              CID_APPEND_FILEPOOL
+        MENUITEM "From &Mail dir",              CID_APPEND_MAIL_DIR
+        MENUITEM "From &Upload",                CID_APPEND_UPLOAD
+        MENUITEM "From &Notification",          CID_APPEND_NOTIFICATION
+        MENUITEM SEPARATOR
+        MENUITEM "&Blank line",                 CID_APPEND_BLANK_LINE
+        MENUITEM "&Comment",                    CID_APPEND_COMMENT
+        MENUITEM "&Indented",                   CID_APPEND_INDENTED
+        MENUITEM SEPARATOR
+        MENUITEM "M&emo",                       CID_APPEND_MEMO
+    END
+END
+
+MID_SORT_FDIR MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "As&cending Sort",             CID_SORT_ASCENDING
+        MENUITEM "D&escending Sort",            CID_SORT_DESCENDING
+        MENUITEM SEPARATOR
+        MENUITEM "Sort by &Name",               CID_SORT_NAME
+        MENUITEM "Sort by &Date",               CID_SORT_DATE
+        MENUITEM "Sort by Si&ze",               CID_SORT_SIZE
+    END
+END
+
+MID_UPDATE MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "From &Mail dir",              CID_UPDATE_MAIL_DIR
+        MENUITEM "From &Upload",                CID_UPDATE_UPLOAD
+    END
+END
+
+MID_FLIST_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "&Insert"
+        BEGIN
+            MENUITEM "From F&dir",                  CID_INSERT_FDIR
+            MENUITEM "From &Filepool",              CID_INSERT_FILEPOOL
+            MENUITEM "From &Mail dir",              CID_INSERT_MAIL_DIR
+            MENUITEM "From &Upload",                CID_INSERT_UPLOAD
+            MENUITEM "From &Notification",          CID_INSERT_NOTIFICATION
+            MENUITEM SEPARATOR
+            MENUITEM "&Blank line",                 CID_INSERT_BLANK_LINE
+            MENUITEM "&Comment",                    CID_INSERT_COMMENT
+            MENUITEM "&Indented",                   CID_INSERT_INDENTED
+            MENUITEM SEPARATOR
+            MENUITEM "M&emo",                       CID_INSERT_MEMO
+        END
+        POPUP "&Append"
+        BEGIN
+            MENUITEM "From F&dir",                  CID_APPEND_FDIR
+            MENUITEM "From &Filepool",              CID_APPEND_FILEPOOL
+            MENUITEM "From &Mail dir",              CID_APPEND_MAIL_DIR
+            MENUITEM "From &Upload",                CID_APPEND_UPLOAD
+            MENUITEM "From &Notification",          CID_APPEND_NOTIFICATION
+            MENUITEM SEPARATOR
+            MENUITEM "&Blank line",                 CID_APPEND_BLANK_LINE
+            MENUITEM "&Comment",                    CID_APPEND_COMMENT
+            MENUITEM "&Indented",                   CID_APPEND_INDENTED
+            MENUITEM SEPARATOR
+            MENUITEM "M&emo",                       CID_APPEND_MEMO
+        END
+        POPUP "&Update"
+        BEGIN
+            MENUITEM "From &Mail dir",              CID_UPDATE_MAIL_DIR
+            MENUITEM "From &Upload",                CID_UPDATE_UPLOAD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Edit...",                    CID_EDIT
+        MENUITEM "Im&port...",                  CID_IMPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Move &up",                    CID_MOVE_UP
+        MENUITEM "&Move down",                  CID_MOVE_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "Notif&y...",                  CID_NOTIFY
+        MENUITEM "Do&wnload",                   CID_DOWNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "E&xport...",                  CID_EXPORT
+        MENUITEM "H&old",                       CID_HOLD
+        MENUITEM "De&lete",                     CID_DELETE
+    END
+END
+
+MID_FDIR_POPUP MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Insert",                     CID_INSERT
+        MENUITEM "&Append",                     CID_APPEND
+        POPUP "&Update"
+        BEGIN
+            MENUITEM "From &Mail dir",              CID_UPDATE_MAIL_DIR
+            MENUITEM "From &Upload",                CID_UPDATE_UPLOAD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Do&wnload",                   CID_DOWNLOAD
+        MENUITEM "E&xport...",                  CID_EXPORT
+        MENUITEM "&Rename",                     CID_RENAME
+        MENUITEM "&Erase",                      CID_DELETE
+    END
+END
+
+MID_FLIST_ACTION MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Notif&y",                     CID_NOTIFY
+        MENUITEM "Do&wnload",                   CID_DOWNLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "E&xport",                     CID_EXPORT
+        MENUITEM "H&old",                       CID_HOLD
+        MENUITEM "De&lete",                     CID_DELETE
+    END
+END
+
+MID_FDIR_ACTION MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "Do&wnload",                   CID_DOWNLOAD
+        MENUITEM "E&xport",                     CID_EXPORT
+        MENUITEM "&Rename",                     CID_RENAME
+        MENUITEM "&Erase",                      CID_DELETE
+    END
+END
+
+MID_INSERT MENU DISCARDABLE 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "From F&dir",                  CID_INSERT_FDIR
+        MENUITEM "From &Filepool",              CID_INSERT_FILEPOOL
+        MENUITEM "From &Mail dir",              CID_INSERT_MAIL_DIR
+        MENUITEM "From &Upload",                CID_INSERT_UPLOAD
+        MENUITEM "From &Notification",          CID_INSERT_NOTIFICATION
+        MENUITEM SEPARATOR
+        MENUITEM "&Blank line",                 CID_INSERT_BLANK_LINE
+        MENUITEM "&Comment",                    CID_INSERT_COMMENT
+        MENUITEM "&Indented",                   CID_INSERT_INDENTED
+        MENUITEM SEPARATOR
+        MENUITEM "M&emo",                       CID_INSERT_MEMO
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARROW               ICON    DISCARDABLE     "Arrow.ico"
+IID_SCALES              ICON    DISCARDABLE     "SCALES.ICO"
+CA_IID_SCALES           ICON    DISCARDABLE     "CA_IID_S.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "DID_FLIST", DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 414
+    END
+
+    "DID_FLIST_FRAME", DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 416
+    END
+
+    "DID_FLIST_NEW", DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 414
+    END
+
+    "DID_CONFIG_FDIR_CA", DIALOG
+    BEGIN
+        BOTTOMMARGIN, 209
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAG                CURSOR  DISCARDABLE     "CURSOR1.CUR"
+IDC_NODRAG              CURSOR  DISCARDABLE     "CUR00001.CUR"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_OK                  "Click on this button when you have finished and want to close the dialog"
+    SID_CANCEL              "Click on this button to cancel the operations you have performed"
+    SID_HELP                "Click on this button for help on this dialog"
+    SID_DLL_INFO            "Click here to find out what versions of the HCTools and WinHorus support DLLs you have installed"
+    SID_CONFIGURE           "Clicking here is equivalent to selecting ""Settings » Moderate"" from the Ameol menus"
+    SID_ABOUT_CONF          "Clicking here is equivalent to selecting ""CIX Forums » Create Forum"" from the Ameol menus"
+    SID_ABOUT_TOPIC         "Clicking here is equivalent to selecting ""CIX Forums » Edit Topics"" from the Ameol menus"
+    SID_ABOUT_FLIST         "Clicking here is equivalent to selecting ""CIX Forums » Edit File List"" from the Ameol menus"
+    SID_INSERT              "Click on this button to insert one or more entries at the cursor position in the file list"
+    SID_APPEND              "Click on this button to append one or more entries to the end of the file list"
+    SID_EDIT                "Click on this button to edit a comment or the description of a file"
+    SID_MOVE_UP             "Click on this button to move highlighted entries higher up in the file list"
+    SID_MOVE_DOWN           "Click on this button to move highlighted entries lower down in the file list"
+    SID_FLIST_ACTION        "Click on this button notify new file list entries or download, export, hold or delete file list entries"
+    SID_UPDATE_FILE         "Click on this button to update a file already in the file list"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_IMPORT              "Click on this button to import flist descriptions from a text file"
+    SID_FDIR_ACTION         "Click on this button to download, export, rename or erase files from the file directory"
+    SID_DOWNLOAD_LISTS      "Click on this button to refresh your offline copies of the moderator's flist, the fdir and the users' flist"
+    SID_UPLOAD_FLIST        "Click on this button to upload the moderator's flist to CIX and update the users' flist"
+    SID_SORT                "Click on this button to sort the selected lines of this flist"
+    SID_CHANGE_TOPIC        "Select this button to edit the flist of another topic"
+    SID_FDIR_UPDATE_FILE    "Click on this button to update files in the fdir with new versions"
+    SID_FDIR_SORT           "Click on this button to resort the fdir display by name, size or date"
+    SID_ORPHANS             "Only display orphan files in the fdir"
+    SID_IN_FLIST            "Only display files in the fdir that have entries in the flist"
+    SID_ALL_FILES           "Display all files in the fdir"
+    SID_SORT_OK             "Click on this button to sort the selected flist entries as specified"
+    SID_SORT_CANCEL         "Click on this button to leave the flist entries sorted as they are"
+    SID_SORT_NAME           "Sort the selected entries in filename order"
+    SID_SORT_DATE           "Sort the selected entries in file date order"
+    SID_SORT_SIZE           "Sort the selected entries in file size order"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_SORT_ASCENDING      "Select this radio button to sort entries in ascending key order"
+    SID_SORT_DESCENDING     "Select this radio button to sort entries in descending key order"
+    SID_DUP_CANCEL          "Cancel this duplicate file insertion"
+    SID_DUP_REPLACE         "Replace the existing flist entry for this file with this entry"
+    SID_DUP_DUPLICATE       "Add a duplicate flist entry for this file"
+    SID_FILENAME            "Enter the name of the file you want to insert into the flist here"
+    SID_INSERT_OK           "Click on this button to add the selected files to the flist"
+    SID_INSERT_CANCEL       "Clicl on this button to return to the flist dialog without adding any files"
+    SID_INSERT_SORT         "Click on this button to sort the displayed files by filename, size or date"
+    SID_INSERT_UPDATE       "Click on this button to refresh your offline list of files"
+    SID_CANCEL_ALL          "If you have multiple files selected, this button will cancel renaming of all files you haven't yet dealt with"
+    SID_NEWNAME             "Enter the new name for the file in here"
+    SID_CONFIRM_FLIST       "Select if you want to confirm before each file is deleted from the flist"
+    SID_DELETE_ALL_FLIST    "Select if you want all selected files to be deleted from the flist without confirmation"
+    SID_CONFIRM_FDIR        "Select if you want to confirm whether or not each associated file is deleted from the fdir when files are deleted from the flist"
+    SID_LEAVE_FDIR          "Select if you want fdir files to be left as orphans when files are deleted from the flist"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_DELETE_ALL_FDIR     "Select if you want fdir files to be deleted without confirmation when their associated flist entries are deleted"
+    SID_FLM_UPDATE          "Check this box to update your offline copy of the moderator's flist"
+    SID_FLD_UPDATE          "Check this box to update your offline copy of the fdir"
+    SID_FLS_UPDATE          "Check this box to update your offline copy of the users' flist"
+    SID_CREATE_FLIST        "Select this button to create a new, empty, flist for this topic"
+    SID_ASSUME              "Select this button if this topic really does have an flist and you want to download it for editing"
+    SID_DONE_ALL            "Click on this button when you have finished editing all the selected flist entries"
+    SID_DESCRIPTION         "Enter your file description in here"
+    SID_INSERT_DATE         "Click on this button to insert today's date into the description"
+    SID_FILE_DATE           "Click on this button to insert the current file's modification date into the description"
+    SID_PREVIOUS            "Click on this button to edit the previous selected flist entry"
+    SID_NEXT                "Click on this button to edit the next selected flist entry"
+    SID_UNDO                "Click on this button to undo the last edits you have performed on this entry"
+    SID_COMMENT_TEXT        "Enter your descriptive text in here"
+    SID_CONFERENCE          "Select a forum you moderate from this list"
+    SID_TOPIC               "Select a topic from this list (local topics are not shown)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_EDIT_UNDO           "Click here to undo all changes you have made to the text"
+    SID_REFRESH_CONF_NOTE   "Click here to get a fresh copy of the forum note from CIX on your next blink"
+    SID_DOWNLOAD_DIR        "This is the directory to which Moderate will download files from the file list and file directory dialogs"
+    SID_DOWNLOAD_BROWSE     "Click here to browse your directory structure for your Moderate download directory"
+    SID_UPLOAD_DIR          "This is the default directory from which Moderate will upload files when you add file to a file list using the ""Upload"" option"
+    SID_UPLOAD_BROWSE       "Click here to browse your directory structure for your Moderate upload directory"
+    SID_DATE_FORMAT         "Enter the form (in ""strftime()"" format) in which you want Moderate to insert dates into file list entry descriptions"
+    SID_MENU_PREFIX         "Check this box if you want Moderate to prefix the menu entries it adds to Ameol with ""Mod: """
+    SID_CFG_EDIT_SEED       "Check this box if you want Moderate to automatically open a message editor on the seed message when you create a new topic"
+    SID_TOPICSIZE_WARNING   "Check this box to globally enable topic size warnings - note that warnings also need to be defined and enabled per-topic"
+    SID_LOCAL_TOPIC_DELETE  "Check this box if you want to be able to delete topics in forums you moderate from your local messagebase"
+    SID_FLIST_SORT_NAME     "Select this radio button for file list sorting to default to by filename"
+    SID_FLIST_SORT_DATE     "Select this radio button for file list sorting to default to by file date"
+    SID_FLIST_SORT_SIZE     "Select this radio button for file list sorting to default to by file size"
+    SID_FLIST_SORT_ASCENDING 
+                            "Select this radio button for file list sorting to default to by ascending key"
+    SID_FLIST_SORT_DESCENDING 
+                            "Select this radio button for file list sorting to default to by descending key"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_AUTO_NOTIFY         "Check this box for the notification message editor to be popped up automatically whenever you add files to a file list"
+    SID_NOTIFY_SIGNATURE    "Check this box for Moderate to automatically append your signature to file list notification messages (if you have one defined)"
+    SID_CFG_NOTIFY_MULTIPLE "Check this box if you want Moderate to default to generating separate notification messages if you select ""Notify"" with more than one file highlighted"
+    SID_NOTIFY_SIZE         "Check this box if you want Moderate to include the file size (if known) into the title line of file list notification messages"
+    SID_NOTIFY_UPPERCASE    "This checkbox controls whether Moderate displays filenames in notification messages in lower, upper or mixed case"
+    SID_CFG_CONFIRM_FLIST   "Check this box if you want Moderate to default to asking for confirmation for the deletion of each entry when deleting more than one file at a time from a file list"
+    SID_CFG_CONFIRM_FDIR    "Select this radio button if you want Moderate to default to asking for confirmation to delete files from the fdir when their entries are deleted from a file list"
+    SID_CFG_LEAVE_FDIR      "Select this radio button if you want Moderate to default to leaving files from the fdir as orphans when their entries are deleted from a file list"
+    SID_CFG_DELETE_ALL_FDIR "Select this radio button if you want Moderate to default to automatically deleting files from the fdir when their entries are deleted from a file list"
+    SID_CFG_ORPHANS         "Select this radio button if you want file directory displays in Moderate to default to showing orphan files only"
+    SID_CFG_IN_FLIST        "Select this radio button if you want file directory displays in Moderate to default to showing files with entries in the flist only"
+    SID_CFG_ALL_FILES       "Select this radio button if you want file directory displays in Moderate to default to showing all files"
+    SID_FDIR_SORT_NAME      "Select this radio button for file directories to be initially displayed sorted by filename"
+    SID_FDIR_SORT_DATE      "Select this radio button for file directories to be initially displayed sorted by file date"
+    SID_FDIR_SORT_SIZE      "Select this radio button for file directories to be initially displayed sorted by file size"
+    SID_FDIR_SORT_ASCENDING "Select this radio button for file directories to be initially displayed sorted by ascending key"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_FDIR_SORT_DESCENDING 
+                            "Select this radio button for file directories to be initially displayed sorted by descending key"
+    SID_CFG_CONFIRM_ALL_FDIR 
+                            "Select this radio button if you want Moderate to prompt you before deleting any files from a file directory"
+    SID_CFG_CONFIRM_FLIST_FDIR 
+                            "Select this radio button if you want Moderate to prompt you before deleting files with entries in the file list from a file directory"
+    SID_CFG_CONFIRM_NONE_FDIR 
+                            "Select this radio button if you want Moderate to delete files from a file directory without confirmation"
+    SID_CREATE_CONF_NAME    "Enter the name of your new CIX forum here"
+    SID_CONF_DESCRIPTION    "Enter a one-line description of your new forum here for the CIX forum list - this line is not used for closed confidential forums"
+    SID_CONF_OPEN           "Select this radio button if you want your new forum to be open"
+    SID_CONF_CLOSED         "Select this radio button if you want your new forum to be closed"
+    SID_CONF_CONFIDENTIAL   "Select this radio button if you want your new forum to be closed confidential"
+    SID_CREATE_TOPIC_NAME   "Type the name of each initial topic in your new forum here after selecting ""New topic"""
+    SID_CREATE_TOPIC_LIST   "The topics you have chosen to create are listed here; topics you have decided not to create after all (by selecting ""Delete"") are greyed out"
+    SID_TOPIC_DESCRIPTION   "Type in a one-line description for each new topic you create here"
+    SID_TOPIC_ADD           "New topic: Click on this button to create a new topic, whereupon the button changes to:\r\rAdd: Click on this button to confirm that you want to create your new topic"
+    SID_CREATE_DELETE       "Delete: Click on this button if you decide you don't want to create a topic after all\r\rUndelete: Click on this button to restore a topic you have deleted for creation"
+    SID_CREATE_CONF_NOTE    "Click this button to create a forum note for your new forum"
+    SID_EDIT_SEED           "Click this button to edit the seed message Moderate has generated for the currently selected new topic"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_CREATE_TOPIC_FLIST  "Check this box if you want your new topic to have a file list"
+    SID_CREATE_TOPIC_READONLY 
+                            "Check this box if you want your new topic to be read-only"
+    SID_CONFIRM_DELETE_TOPIC 
+                            "Click on this button if you are sure you want to delete this topic"
+    SID_EXPORT_LOCAL        "Select this radio button if you want your file list entry to refer to a local file directory file instead of the filepool file"
+    SID_EXPORT_EXPORT       "Select this radio button if you want to export this file to the filepool"
+    SID_EXPORT_TRANSFORM    "Select this radio button if you want this file list entry to refer to an existing filepool file"
+    SID_ERR_FILE            "Select this radio button if you want this erroneous file list line to be changed to a correct file reference line"
+    SID_ERR_MEMO            "Select this radio button if you want this erroneous file list line to be changed to a hidden memo line"
+    SID_ERR_COMMENT         "Select this radio button if you want this erroneous file list line to be changed to a comment line"
+    SID_ERR_INDENTED        "Select this radio button if you want this erroneous file list line to be changed to an indented comment line"
+    SID_ERR_DISCARD         "Select this radio button if you want this erroneous file list line to be thrown away"
+    SID_ERR_ABORT           "Click this button to abort reading this file list"
+    SID_NOTIFY_IMPORT       "Click this button to import text from a mailed notification message"
+    SID_NOTIFY_SINGLE       "Select this radio button to generate a single notification message for all the files you have selected"
+    SID_NOTIFY_MULTIPLE     "Select this radio button to generate separate notification messages for each the files you have selected"
+    SID_CONFIRM_PRUNE       "Check this box if you are sure you want to prune this topic on CIX"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_TOPIC_CONFERENCE    "Select the forum you want to work on from this drop-down list of those you moderate"
+    SID_TOPIC_TOPIC_NAME    "Type the name of each new topic in your new forum here after selecting ""New topic"""
+    SID_TOPIC_TOPIC_LIST    "The topics in your forum are listed here; topics you have marked to delete (or new topics you have decided not to create after all) are greyed out"
+    SID_TOPIC_DELETE        "Delete: Click on this button to delete a topic on CIX (or if you decide you don't want to create a new topic after all)\r\rUndelete: Click on this button to restore a topic you have marked for deletion"
+    SID_TOPIC_PRUNE         "Click this button if you want to prune this topic on CIX"
+    SID_TOPIC_UPDATE        "Click this button to set the update options for this forum and topic"
+    SID_TOPIC_CONF_NOTE     "Click this button to edit the forum note for your forum"
+    SID_TOPIC_TOPIC_FLIST   "This checkbox indicates whether this topic has a file list. You can change the setting for new topics you are creating"
+    SID_TOPIC_TOPIC_READONLY 
+                            "Check or uncheck this box to change the read-only status of this topic"
+    SID_UPDATE_TOPIC_NAME   "Select the topic you want to set (or ""<all topics>"") from this drop-down list"
+    SID_UPDATE_TOPICS       "Check this box to update the list of topics in your forum from CIX on your next blink"
+    SID_UPDATE_NEXT         "Check this box to update the topic size for this topic on your next blink"
+    SID_TOPICSIZE_ENABLE    "Check this box to enable topic size warnings for this topic"
+    SID_TOPICSIZE_THRESHOLD "Set the threshold at which Moderate will warn you about topic size as percentage full here"
+    SID_UPDATE_MANUAL       "Select this radio button for topic sizes only to be updated when you manually request them to"
+    SID_UPDATE_PERIODIC     "Select this radio button for topic sizes to be updated periodically"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    SID_UPDATE_ALWAYS       "Select this radio button for topic sizes to be updated every blink"
+    SID_UPDATE_DAYS         "Set the number of days between periodic topic size updates here"
+    SID_RESET               "Click this button to reset the internal ""updating"" flags for this forum if update requests have been removed manually from the Ameol outbasket"
+    SID_VALIDATE_NEWNAME    "Enter a new DOS-compatible filename for the file here"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

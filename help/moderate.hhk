@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Contents">
+		<param name="Name" value="Contents">
+		<param name="Local" value="html/hid_contents.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Creating a CIX Forum Using Ameol">
+		<param name="Name" value="Creating a CIX Forum Using Ameol">
+		<param name="Local" value="html/hid_create_conf.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Creating a New CIX Forum">
+		<param name="Name" value="Creating a New CIX Forum">
+		<param name="Local" value="html/hid_creating_a_conference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Edit File List">
+		<param name="Name" value="Edit File List">
+		<param name="Local" value="html/hid_edit_flist.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Moderating a Forum">
+		<param name="Name" value="Moderating a Forum">
+		<param name="Local" value="html/hid_moderating_a_conference.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Keyword" value="Reference Contents">
+		<param name="Name" value="Reference Contents">
+		<param name="Local" value="html/hid_reference.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>
+

@@ -1,0 +1,51 @@
+#ifdef _WIN32
+    #include <winver.h>
+#else
+    #include <ver.h>
+#endif
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 3, 0, 3, 0
+PRODUCTVERSION 3, 0, 3, 0
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+    FILEFLAGS VS_FF_PRERELEASE|VS_FF_DEBUG
+#else
+    FILEFLAGS VS_FF_PRERELEASE
+#endif
+#ifdef _WIN32
+    FILEOS VOS__WINDOWS32
+#else
+    FILEOS VOS__WINDOWS16
+#endif
+FILETYPE VFT_DLL
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904E4"
+        {
+            VALUE "CompanyName", "Horus Communications\000"
+            VALUE "FileDescription", "Windows Utility Routine Library\000"
+            #ifdef _DEBUG
+                VALUE "FileVersion", "3.00.3 - debug build\000"
+            #else
+                VALUE "FileVersion", "3.00.3\000"
+            #endif
+            #ifdef _WIN32
+                VALUE "InternalName", "WINHOR32\000"
+                VALUE "OriginalFilename", "WINHOR32.DLL\000"
+            #else
+                VALUE "InternalName", "WINHORUS\000"
+                VALUE "OriginalFilename", "WINHORUS.DLL\000"
+            #endif
+            VALUE "LegalCopyright", "© Copyright 1993-1997 Pete Jordan, Horus Communications\000"
+            VALUE "ProductName", "WinHorus\000"
+            VALUE "ProductVersion", "3.00.3\000"
+        }
+    }
+
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x809, 1252
+    }
+}
+

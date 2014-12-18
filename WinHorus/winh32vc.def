@@ -1,0 +1,86 @@
+LIBRARY     WINHOR32
+
+DESCRIPTION 'Windows utility library (c) 1993-1997 Horus Communications'
+
+CODE        PRELOAD MOVEABLE DISCARDABLE
+DATA        PRELOAD MOVEABLE MULTIPLE
+
+EXPORTS
+            greallocz                      @1
+            grealloc                       @2
+            gcallocz                       @3
+            gcalloc                        @4
+            gmallocz                       @5
+            gmalloc                        @6
+            gfree                          @7
+            gguardsize                     @8
+            greallocsize                   @9
+            gthreshold                     @10
+            gallocsize                     @11
+            fileSize                       @12
+            truncateFile                   @13
+            writeSeek                      @14
+            readSeek                       @15
+            writeTell                      @16
+            readTell                       @17
+            writeBuffsize                  @18
+            readBuffsize                   @19
+            WRITELINE                      @20
+            writeChar                      @21
+            readLine                       @22
+            readChar                       @23
+            readRawChar                    @24
+            closeFile                      @25
+            suspendFile                    @26
+            flushFile                      @27
+            reopenFile                     @28
+            fileHandle                     @29
+            openFileName                   @30
+            lastStreamError                @31
+            _OPENFILE                      @32
+            defaultBuffsize                @33
+            GetPrivateProfileBool          @34
+            WinHorusVersion                @35
+            maxOpenFiles                   @36
+            defaultFormatBuffsize          @37
+            formatBuffsize                 @38
+            writeBlock                     @39
+            writeRawChar                   @40
+            readBlock                      @41
+            WRITEPRIVATEPROFILEITEM        @42
+            RadioButton                    @43
+            hmemset                        @44
+            readTranslate                  @45
+            writeTranslate                 @46
+            lstrcpynz                      @47
+            versionDecode                  @48
+            versionCheck                   @49
+            defaultBuffcount               @50
+            fileBuffcount                  @51
+            dupFile                        @52
+            readRandom                     @53
+            writeRandom                    @54
+            fileBuffsize                   @55
+            streamioErrtext                @56
+            lastOSError                    @57
+            gcallback                      @58
+            gstatus                        @59
+            gcheckblock                    @60
+            gcheckall                      @61
+            gstrerror                      @62
+            alertDisplay                   @63
+            alertLevel                     @64
+            ebcdic2ascii                   @65
+            ascii2ebcdic                   @66
+            clearStatus                    @67
+            initStatus                     @68
+            setStatus                      @69
+            setError                       @70
+            decodeStatus                   @71
+            lstrncmp                       @72
+            lstrncmpi                      @73
+            strupper                       @74
+            strlower                       @75
+            strmixed                       @76
+			WinHorusInit				   @77
+

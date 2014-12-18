@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>Assumptions Made When Importing File Descriptions</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P><A NAME="hid_import_assumptions"></A><B>Assumptions Made When Importing File Descriptions</B></P>
+
+<P>{bmlwd RARROW.BMP}The file is an ASCII text file. Line termination may be LF or CR/LF.</P>
+
+<P>{bmlwd RARROW.BMP}File names are always the first token in a line. They may be preceded by spaces or tabs.</P>
+
+<P>{bmlwd RARROW.BMP}Filenames in the import file are only recognised if they are already in the file list. In other words, they must be inserted from the file directory first.</P>
+
+<P>{bmlwd RARROW.BMP}Lines not starting with a filename held in the file list are ignored (unless they are recognised as a continuation of a file description - see below).</P>
+
+<P>{bmlwd RARROW.BMP}Fields in each line are separated by spaces or tabs.</P>
+
+<P>{bmlwd RARROW.BMP}The file description part of each line always starts the same number of tokens in.</P>
+
+<P>{bmlwd RARROW.BMP}Lines following a successfully parsed file line that are indented more than that line are treated as continuations of that line's file description.</P>
+
+</BODY>
+</HTML>
