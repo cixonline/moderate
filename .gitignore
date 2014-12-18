@@ -1,0 +1,16 @@
+*.obj
+*.sbr
+*.bsc
+*.manifest
+*.res
+*.pdb
+moderate/Debug/MODERA32.lib
+*.ilk
+*.idb
+WinHorus/Debug/BuildLog.htm
+moderate/Debug/BuildLog.htm
+moderate/Debug/modera32.ADN
+*.exp
+*.dep
+moderate/Debug/modera32.dll
+WinHorus/Debug/winhorus.lib
