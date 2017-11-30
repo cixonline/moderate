@@ -279,7 +279,7 @@ int readFdir(LPCSTR fnFLD, LPPFdirEntry lpFdir, LPINT fdirFiles)
         } else if (lineLength>0)
             if (_fstrncmp(buff, "****_access on ", 14)==0)
                 alert(NULL, "File %s is not accessible in the flist for %s - "
-                            "please contact support@cix.co.uk for assistance", (LPSTR)buff+14, (LPSTR)fnFLD);
+                            "please contact support@cix.uk for assistance", (LPSTR)buff+14, (LPSTR)fnFLD);
 
             else {
                 alert(NULL, "Unexpected line length in %s", (LPSTR)fnFLD);

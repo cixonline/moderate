@@ -946,7 +946,7 @@ BOOL _EXPORT CALLBACK QueryAddon( int qryType, LPVOID qryData )
 			if( lpsu->fCIXService )
 				strcpy( lpsu->lpURLStr, "cix:cix.support/ameol" );
 			else
-				strcpy( lpsu->lpURLStr, "mailto:support@cix.co.uk" );
+				strcpy( lpsu->lpURLStr, "mailto:support@cix.uk" );
 			fRet = TRUE;
 			break;
 			}

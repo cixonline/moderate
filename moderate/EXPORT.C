@@ -10,8 +10,6 @@
 #include "flist.h"
 #include "export.h"
 
-void AddMailNotifyItem(LPFdirEntry lpFdirEntry, int type);
-
 void exportFdirEntry(LPContext lpContext, LPFdirEntry lpFdirEntry)
 {
     HSCRIPT hScript=initScript("Moderate", FALSE);
@@ -79,13 +77,11 @@ static void exportFdir_OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotif
         case CID_LOCAL:
             lpExportFdirData->lpFdirEntry->fdirFlags&= ~FDIR_FLAG_FILEPOOL;
             lpExportFdirData->lpFdirEntry->fdirFlags&= ~FDIR_FLAG_EXPORT;
-			AddMailNotifyItem(lpExportFdirData->lpFdirEntry, 0);
             break;
 
         case CID_EXPORT:
             lpExportFdirData->lpFdirEntry->fdirFlags&= ~FDIR_FLAG_FILEPOOL;
 			lpExportFdirData->lpFdirEntry->fdirFlags|=FDIR_FLAG_EXPORT;
-			AddMailNotifyItem(lpExportFdirData->lpFdirEntry, 1);
 			break;
 
         case CID_TRANSFORM:

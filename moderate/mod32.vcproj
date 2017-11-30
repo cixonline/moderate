@@ -658,30 +658,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="MailNtfy.c"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						BrowseInformation="1"
-						UndefinePreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="0"
-						BrowseInformation="1"
-						UndefinePreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-			</File>
-			<File
 				RelativePath="MDIDlg.c"
 				>
 				<FileConfiguration

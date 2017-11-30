@@ -14,3 +14,4 @@ moderate/Debug/modera32.ADN
 *.dep
 moderate/Debug/modera32.dll
 WinHorus/Debug/winhorus.lib
+*.user

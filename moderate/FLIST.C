@@ -831,7 +831,7 @@ static void redrawFlistEntry(HWND hwnd, LPFlistData lpFlistData, LPFlistEntry lp
 		RECT rect;
 
 		if ((long)flistIndex==LB_ERR)
-			alert(hwnd, "Internal error (redrawFlistEntry): file %s not found in file list - please report to CIX Support (support@cix.co.uk)",
+			alert(hwnd, "Internal error (redrawFlistEntry): file %s not found in file list - please report to CIX Support (support@cix.uk)",
 				lpFlistEntry->flistName);
 
 		else if (ListBox_GetItemRect(lpFlistData->hwndFlist, flistIndex, &rect)!=LB_ERR)
@@ -1162,7 +1162,7 @@ static BOOL flistPostlude(HWND hwnd, LPFlistData lpFlistData, LPContext lpContex
 static void parseError(HWND hwnd, LPCSTR fileDescription, LPCSTR fileName, LPCSTR fileExtension)
 {
     alert(hwnd, "The moderator addon was unable to parse the %s file - please check the file "
-		"%s.%s in an editor. If it appears to be correct, please binmail it to CIX Support (support@cix.co.uk) "
+		"%s.%s in an editor. If it appears to be correct, please binmail it to CIX Support (support@cix.uk) "
 		"with a cover note describing the problem.",
 	  fileDescription, fileName, fileExtension);
 
@@ -1583,7 +1583,7 @@ void addFlistItem(HWND hwnd, LPFlistData lpFlistData, LPFdirEntry lpFdirEntry)
 	nInsertPoint=lpFlistData->flistInsertPoint++;
 
     if (nInsertPoint>lpFlistData->flistEntries) {
-	alert(hwnd, "Internal error in addFlistItem(): insertPoint=%d, flistEntries=%d - please report to CIX Support (support@cix.co.uk)",
+	alert(hwnd, "Internal error in addFlistItem(): insertPoint=%d, flistEntries=%d - please report to CIX Support (support@cix.uk)",
 	      nInsertPoint, lpFlistData->flistEntries);
 
 	nInsertPoint=lpFlistData->flistEntries;
