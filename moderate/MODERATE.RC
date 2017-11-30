@@ -955,7 +955,7 @@ FONT 8, "MS Sans Serif"
 BEGIN
     LTEXT           "Ameol Moderator Functions Addon",IDC_APPTITLE,54,7,161,
                     10,SS_NOPREFIX
-    LTEXT           "© 1993-2014 CIX Online Ltd. All Rights Reserved",IDC_COPYRIGHT,
+    LTEXT           "© 1993-2017 CIX Ltd. All Rights Reserved",IDC_COPYRIGHT,
                     54,17,161,8,SS_NOPREFIX
     LTEXT           "(Version)",CID_VERSIONTEXT,54,27,161,8,SS_NOPREFIX
     DEFPUSHBUTTON   "OK",IDOK,166,74,50,14
