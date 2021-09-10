@@ -81,7 +81,10 @@ static BOOL initGlobals( HINSTANCE hInst )
 
 	/* Get and save the Windows version
 	 */
+#pragma warning(push)
+#pragma warning(disable:4996)
 	wWinVer = LOWORD( GetVersion() );
+#pragma warning(pop)
 	wWinVer = (( (WORD)(LOBYTE( wWinVer ) ) ) << 8 ) | ( (WORD)HIBYTE( wWinVer ) );
 
 	/* Allocate and initialise the global structure.
@@ -262,7 +265,10 @@ BOOL _EXPORT CALLBACK Load( HWND hwndParent )
 	
 //	hCat = OpenCategory( "MAIN" );
 
+#pragma warning(push)
+#pragma warning(disable:4996)
 	wWinVer = LOWORD( GetVersion() );
+#pragma warning(pop)
 	wWinVer = (( (WORD)(LOBYTE( wWinVer ) ) ) << 8 ) | ( (WORD)HIBYTE( wWinVer ) );
 #ifdef WIN32
 	hbrMDIDlgBackgnd = (HBRUSH)( wWinVer < 0x35F ? (COLOR_WINDOW+1) : (COLOR_BTNFACE+1) );

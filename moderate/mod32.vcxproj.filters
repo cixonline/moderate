@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{de59b2f5-c1cc-46cf-8289-78f070c8aa3f}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d7a3c2dc-64fb-4f70-9f87-e0f0e2f42aad}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5c769a58-358e-470a-8f02-edabf20013cf}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ALERT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AMLISTS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AMSCRIPT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONFIRM.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONFNOTE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CONFS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DESCEDIT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DESCIMP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DUPLICAT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EDIT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EXPORT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FLIST.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GETFLIST.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HCTOOLS.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HELP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INSFDIR.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="INSFPOOL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ListMove.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MDIDlg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MODERATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MSGEDIT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewEdit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewNotfy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NOTIFY.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QUERY.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RENAME.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SETUP.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SORT.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TABCNTRL.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TOPICINF.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TOPICIO.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TOPICSET.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TOPICUPD.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UPDATE.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VERIFY.C">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MOD32.DEF">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="CUR00001.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="CURSOR1.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MODERATE.RC">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amlists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="amscript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bldinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compat32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CONFS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EDIT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EXPORT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FLIST.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GLOBALS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gmalloc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hctools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HELP.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MSGEDIT.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SETUP.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STATUS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STREAMIO.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STRFTIME.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="STRINGS.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TABCNTRL.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VERIFY.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="winhorus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Arrow.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00001.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00002.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00003.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00004.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00005.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00006.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="BMP00007.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="CA_IID_S.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="CREATE_C.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EDIT_FIL.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EDIT_TOP.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HELP.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HELP_17.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HELP_ABO.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="HELP_CON.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Moderat3.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SCALES.ICO">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="set24.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TEMP1.BMP">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="changes.txt" />
+  </ItemGroup>
+</Project>
